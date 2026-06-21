@@ -33,7 +33,7 @@
   @include colorVariable(--border-color, #1012131a);
 
   // Section Background
-  @include colorVariable(--section-bg, #f4f7f2);
+  @include colorVariable(--section-bg, #f4f5f8);
 
   /* ================================ Box Shadow Start =============================== */
   --box-shadow: 0px 2px 15px hsl(var(--black) / 0.05);

@@ -62,7 +62,7 @@
     --heading-color: 200 9% 7%;
     --black: 200 9% 7%;
     --border-color: 200 9% 7%;
-    --section-bg: 96 24% 96%;
+    --section-bg: 225 22% 96%;
   /* ================================ Box Shadow Start =============================== */
     --box-shadow: 0px 2px 15px hsl(var(--black) / 0.05);
   /* ================================ Box Shadow End =============================== */
@@ -5232,7 +5232,7 @@ input[type=number] {
 }
 
 /* ======================  Banner Section End  ======================*/
-/* ======================  Signup Role Section Start  ======================*/
+/* ====================== Signup Role Section Start ====================== */
 .signup-role {
     background-color: hsl(var(--body-bg));
 }
@@ -5240,69 +5240,152 @@ input[type=number] {
 .signup-role__grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px;
+    gap: 26px;
 }
 
 .signup-role__card {
+    position: relative;
+    min-height: 430px;
     overflow: hidden;
-    border: 1px solid hsl(var(--border-color));
-    border-radius: 22px;
-    background-color: hsl(var(--black));
-    box-shadow: 0 22px 60px hsl(var(--white)/0.08);
+    border: 1px solid hsl(var(--border-color)/0.1);
+    border-radius: 24px;
+    background-color: hsl(var(--white));
 }
 
-.signup-role__media {
-    height: 260px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background-color: hsl(var(--section-bg));
-}
-
-.signup-role__media img {
-    max-width: 88%;
-    max-height: 100%;
-    object-fit: contain;
+.signup-role__card--freelancer .signup-role__media::before {
+    border-color: hsl(var(--base)/0.3);
+    background-color: hsl(var(--base)/0.14);
+    transform: rotate(-5deg);
 }
 
 .signup-role__content {
-    padding: 30px;
+    position: relative;
+    z-index: 3;
+    width: 58%;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 28px 30px;
 }
 
-.signup-role__content h3 {
-    margin: 8px 0 12px;
-    color: hsl(var(--heading-color));
+.signup-role__role {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.signup-role__role-icon {
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 54px;
+    border-radius: 50%;
+    color: hsl(var(--black));
+    background-color: hsl(var(--base)/0.2);
     font-size: 28px;
-    font-weight: 900;
 }
 
-.signup-role__content p {
-    margin: 0 0 24px;
+.signup-role__role div span {
+    display: block;
+    color: hsl(var(--heading-color));
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.signup-role__role div i {
+    width: 28px;
+    height: 3px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color: hsl(var(--base));
+}
+
+.signup-role__description {
+    margin: 0 0 22px;
     color: hsl(var(--body-color));
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.65;
 }
 
-.signup-role__eyebrow {
-    color: hsl(var(--base-two));
-    font-weight: 800;
+.signup-role__features {
+    display: grid;
+    gap: 12px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
 }
 
-.signup-role__btn {
+.signup-role__features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: hsl(var(--body-color));
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.signup-role__features i {
+    width: 28px;
+    height: 28px;
     display: inline-flex;
-    padding: 13px 18px;
-    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 28px;
+    border-radius: 50%;
     color: hsl(var(--black));
-    background-color: hsl(var(--base));
-    font-weight: 800;
+    background-color: hsl(var(--base)/0.2);
+    font-size: 15px;
 }
 
-@media screen and (max-width: 767px) {
-    .signup-role__grid {
-        grid-template-columns: 1fr;
-    }
+.signup-role__media {
+    position: absolute;
+    z-index: 2;
+    right: -18px;
+    bottom: 0;
+    width: 58%;
+    height: 76%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
 }
-/* ======================  Signup Role Section End  ======================*/
+
+.signup-role__media::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    right: 24px;
+    bottom: 12px;
+    width: 76%;
+    height: 88%;
+    border: 1px solid hsl(var(--base)/0.3);
+    border-radius: 50% 50% 12px 12px;
+    background-color: hsl(var(--base)/0.16);
+    box-shadow: 0 18px 40px hsl(var(--black)/0.06);
+    transform: rotate(5deg);
+    transform-origin: center bottom;
+}
+
+.signup-role__media img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: right bottom;
+}
+
+.signup-role .btn {
+    max-width: 254px !important;
+}
+
+/* ====================== Signup Role Section End ====================== */
 /* ======================  Cetagorey Section Start  ======================*/
 .cetagorey-section {
     position: relative;
@@ -5415,9 +5498,7 @@ input[type=number] {
 /* ======================  Cetagorey Section End  ======================*/
 /* ====================== How It Work Section Start ====================== */
 .how-it-work {
-    background-color: hsl(var(--base)/0.03);
-    border-top: 1px solid hsl(var(--base)/0.2);
-    border-bottom: 1px solid hsl(var(--base)/0.2);
+    background-color: hsl(var(--section-bg)/0.4);
 }
 
 .how-it-work__stage {

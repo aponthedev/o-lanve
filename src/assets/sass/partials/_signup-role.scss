@@ -1,71 +1,158 @@
-/* ======================  Signup Role Section Start  ======================*/
+/* ====================== Signup Role Section Start ====================== */
 .signup-role {
   background-color: hsl(var(--body-bg));
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px;
+    gap: 26px;
   }
 
   &__card {
+    position: relative;
+    min-height: 430px;
     overflow: hidden;
-    border: 1px solid hsl(var(--border-color));
-    border-radius: 22px;
-    background-color: hsl(var(--black));
-    box-shadow: 0 22px 60px hsl(var(--white) / 0.08);
+    border: 1px solid hsl(var(--border-color) / 0.1);
+    border-radius: 24px;
+    background-color: hsl(var(--white));
   }
 
-  &__media {
-    height: 260px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background-color: hsl(var(--section-bg));
-
-    img {
-      max-width: 88%;
-      max-height: 100%;
-      object-fit: contain;
+  &__card--freelancer {
+    .signup-role__media::before {
+      border-color: hsl(var(--base) / 0.3);
+      background-color: hsl(var(--base) / 0.14);
+      transform: rotate(-5deg);
     }
   }
 
   &__content {
-    padding: 30px;
+    position: relative;
+    z-index: 3;
+    width: 58%;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 28px 30px;
+  }
 
-    h3 {
-      margin: 8px 0 12px;
-      color: hsl(var(--heading-color));
+  &__role {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+
+    &-icon {
+      width: 54px;
+      height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 54px;
+      border-radius: 50%;
+      color: hsl(var(--black));
+      background-color: hsl(var(--base) / 0.2);
       font-size: 28px;
-      font-weight: 900;
     }
 
-    p {
-      margin: 0 0 24px;
+    div {
+      span {
+        display: block;
+        color: hsl(var(--heading-color));
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      i {
+        width: 28px;
+        height: 3px;
+        display: block;
+        margin-top: 10px;
+        border-radius: 3px;
+        background-color: hsl(var(--base));
+      }
+    }
+  }
+
+  &__description {
+    margin: 0 0 22px;
+    color: hsl(var(--body-color));
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  &__features {
+    display: grid;
+    gap: 12px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       color: hsl(var(--body-color));
       font-size: 16px;
-      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    i {
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 28px;
+      border-radius: 50%;
+      color: hsl(var(--black));
+      background-color: hsl(var(--base) / 0.2);
+      font-size: 15px;
     }
   }
 
-  &__eyebrow {
-    color: hsl(var(--base-two));
-    font-weight: 800;
-  }
+  &__media {
+    position: absolute;
+    z-index: 2;
+    right: -18px;
+    bottom: 0;
+    width: 58%;
+    height: 76%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
 
-  &__btn {
-    display: inline-flex;
-    padding: 13px 18px;
-    border-radius: 10px;
-    color: hsl(var(--black));
-    background-color: hsl(var(--base));
-    font-weight: 800;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: 24px;
+      bottom: 12px;
+      width: 76%;
+      height: 88%;
+      border: 1px solid hsl(var(--base) / 0.3);
+      border-radius: 50% 50% 12px 12px;
+      background-color: hsl(var(--base) / 0.16);
+      box-shadow: 0 18px 40px hsl(var(--black) / 0.06);
+      transform: rotate(5deg);
+      transform-origin: center bottom;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      object-position: right bottom;
+    }
   }
 }
 
-@media screen and (max-width: 767px) {
-  .signup-role__grid {
-    grid-template-columns: 1fr;
-  }
+.signup-role .btn {
+  max-width: 254px !important;
 }
-/* ======================  Signup Role Section End  ======================*/
+
+/* ====================== Signup Role Section End ====================== */
