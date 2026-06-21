@@ -229,6 +229,21 @@
     interval: 100,
     origin: 'bottom',
   });
+
+  sr.reveal('.account-section__content', {
+    origin: 'left',
+    distance: '45px',
+    duration: 1100,
+    reset: false,
+  });
+
+  sr.reveal('.account-section__visual', {
+    origin: 'right',
+    distance: '45px',
+    duration: 1100,
+    delay: 180,
+    reset: false,
+  });
   // ========================= Scroll Reveal Js End ===================
 
   // ========================== Table Data Label Js Start =====================
