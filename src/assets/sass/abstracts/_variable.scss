@@ -8,14 +8,14 @@
   --body-font: "Inter", sans-serif;
 
   /* ========================= Theme Color Start ============================= */
-  @include colorVariable(--base, #16c900, 10);
+  @include colorVariable(--base, #c8ff03, 10);
 
   @include colorVariable(--base-two, #0f8f62, 10);
   /* ========================= Theme Color End ============================= */
 
   /* ========================= Color Variables Start =========================== */
   // White Color
-  @include colorVariable(--white, #101213);
+  @include colorVariable(--white, #ffffff);
 
   // Body Color
   @include colorVariable(--body-color, #525866);
@@ -27,7 +27,7 @@
   @include colorVariable(--heading-color, #101213);
 
   // Black Color
-  @include colorVariable(--black, #ffffff);
+  @include colorVariable(--black, #101213);
 
   //Border Color
   @include colorVariable(--border-color, #1012131a);
@@ -61,13 +61,13 @@
   /* ============================== Bootstrap Modifier End ============================== */
 
   /* ============================== Dark Mood Color Modify Start ============================== */
-  [data-theme='dark'] {
-    // Reverse White
-    @include colorVariable(--white, #f8fafc);
+  // [data-theme='dark'] {
+  //   // Reverse White
+  //   @include colorVariable(--white, #f8fafc);
 
-    // Reverse Black
-    @include colorVariable(--black, #101213);
-  }
+  //   // Reverse Black
+  //   @include colorVariable(--black, #101213);
+  // }
 
   /* ============================== Dark Mood Color Modify End ============================== */
 }

@@ -20,7 +20,7 @@
   &__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, hsl(var(--white)), transparent 78%);
+    background: linear-gradient(90deg, hsl(var(--black)), transparent 78%);
     pointer-events: none;
   }
 
@@ -83,7 +83,7 @@
   &__title {
 
     margin-bottom: 18px;
-    color: hsl(var(--black));
+    color: hsl(var(--white));
     font-size: 80px;
     line-height: 1.2;  
 
@@ -93,7 +93,7 @@
   &__desc {
   
     margin-bottom: 18px;
-    color: hsl(var(--black) / 0.84);
+    color: hsl(var(--white) / 0.84);
     font-size: 24px;
     line-height: 1.32;
 
@@ -188,6 +188,7 @@
     &__title{
         font-size: 16px;
         margin-bottom: 4px;
+        color: hsl(var(--white));
     }
 
     &__desc{
