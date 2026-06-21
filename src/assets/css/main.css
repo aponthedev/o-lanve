@@ -5328,7 +5328,7 @@ input[type=number] {
     justify-content: flex-start;
     overflow: hidden;
     padding: 24px 10px;
-    border: 1px solid hsl(var(--border-color)/0.12);
+    border: 2px solid hsl(var(--black)/0.12);
     border-radius: 18px;
     color: hsl(var(--black));
     background-color: hsl(var(--base)/0.02);
@@ -5338,7 +5338,13 @@ input[type=number] {
 
 .cetagorey__card:hover, .cetagorey__card:focus {
     color: hsl(var(--black));
-    border-color: hsl(var(--base)/0.5);
+    border-color: hsl(var(--base));
+    background-color: hsl(var(--base));
+}
+
+.cetagorey__card:hover .cetagorey__icon, .cetagorey__card:focus .cetagorey__icon {
+    color: hsl(var(--base)) !important;
+    background-color: hsl(var(--black)) !important;
 }
 
 .cetagorey__card:hover::before, .cetagorey__card:focus::before {
@@ -5380,22 +5386,18 @@ input[type=number] {
 .cetagorey__name {
     position: relative;
     z-index: 1;
-    min-height: 40px;
-    margin-bottom: 10px;
     color: hsl(var(--black));
     font-size: 16px;
     font-weight: 500;
     line-height: 1.2;
     display: -webkit-box;
     overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
 }
 
 .cetagorey__count {
     position: relative;
     z-index: 1;
-    margin-top: auto;
+    margin-top: 10px;
     color: hsl(var(--body-color));
     font-size: 13px;
     font-weight: 800;
