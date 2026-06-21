@@ -1,0 +1,97 @@
+/* ======================  Account Section Start  ======================*/
+.account-section {
+  overflow: hidden;
+  background-color: hsl(var(--black));
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  &__content {
+    h2 {
+      margin: 0;
+      color: hsl(var(--heading-color));
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.05;
+      font-weight: 900;
+    }
+
+    p {
+      margin: 22px 0 0;
+      color: hsl(var(--body-color));
+      font-size: 18px;
+      line-height: 1.7;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 14px;
+    margin: 28px 0 34px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      gap: 12px;
+      color: hsl(var(--heading-color));
+      font-weight: 800;
+    }
+
+    i {
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: hsl(var(--black));
+      background-color: hsl(var(--base));
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    padding: 14px 22px;
+    border-radius: 10px;
+    color: hsl(var(--black));
+    background-color: hsl(var(--base));
+    font-weight: 900;
+  }
+
+  &__visual {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    img {
+      position: relative;
+      z-index: 2;
+      max-width: min(540px, 100%);
+      max-height: 560px;
+      object-fit: contain;
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    z-index: 1;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background-color: hsl(var(--base) / 0.18);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .account-section__wrap {
+    grid-template-columns: 1fr;
+  }
+}
+/* ======================  Account Section End  ======================*/

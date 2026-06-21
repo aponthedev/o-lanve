@@ -1,0 +1,88 @@
+/* ======================  Why Choose Us Section Start  ======================*/
+.why-choose-us {
+  background-color: hsl(var(--section-bg));
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: 52px;
+    align-items: center;
+  }
+
+  &__content {
+    h2 {
+      margin: 0;
+      color: hsl(var(--heading-color));
+      font-size: clamp(36px, 4vw, 54px);
+      line-height: 1.08;
+      font-weight: 900;
+    }
+
+    p {
+      margin: 20px 0 30px;
+      color: hsl(var(--body-color));
+      font-size: 17px;
+      line-height: 1.75;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    padding: 14px 20px;
+    border-radius: 10px;
+    color: hsl(var(--black));
+    background-color: hsl(var(--base));
+    font-weight: 800;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 26px;
+    border: 1px solid hsl(var(--border-color));
+    border-radius: 18px;
+    background-color: hsl(var(--black));
+
+    span {
+      width: 50px;
+      height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      color: hsl(var(--black));
+      background-color: hsl(var(--base));
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      color: hsl(var(--heading-color));
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    p {
+      margin: 0;
+      color: hsl(var(--body-color));
+      line-height: 1.6;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .why-choose-us__wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .why-choose-us__grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ======================  Why Choose Us Section End  ======================*/

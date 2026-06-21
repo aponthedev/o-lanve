@@ -1,0 +1,73 @@
+/* ======================  Dropdown Section Start  ======================*/
+.dropdown-toggle {
+    color: hsl(var(--heading-color));
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dropdown-toggle::after {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-left: 0;
+    margin-top: -4px;
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    vertical-align: 0;
+    transition: 0.2s;
+}
+
+.dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(225deg);
+    margin-top: 2px;
+}
+
+.dropdown-menu {
+    min-width: max-content;
+    padding: 8px;
+    font-size: 14px;
+    color: hsl(var(--heading-color));
+    background-color: hsl(var(--white));
+    border: 1px solid hsl(var(--base) / 0.12);
+    border-radius: 16px;
+    white-space: nowrap;
+    box-shadow: 0 18px 45px hsl(var(--black) / 0.1);
+    overflow: hidden;
+    margin-top: 10px !important;
+}
+
+.dropdown-item {
+    padding: 10px 14px;
+    font-weight: 500;
+    color: hsl(var(--black));
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    transition: 0.3s;
+
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+
+    &:hover,
+    &:focus {
+        color: hsl(var(--black)) !important;
+        background-color: hsl(var(--base)) !important;
+    }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: hsl(var(--black));
+    background: linear-gradient(95deg, hsl(var(--base)), hsl(var(--base-two)));
+}
+
+/* ======================  Dropdown Section End  ======================*/

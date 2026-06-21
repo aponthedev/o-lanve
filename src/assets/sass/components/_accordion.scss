@@ -1,0 +1,68 @@
+/* =========================== Accordion Css start ============================= */
+.accordion {
+  display: grid;
+  gap: 14px;
+
+  .accordion-item {
+    overflow: hidden;
+    border: 1px solid hsl(var(--border-color));
+    border-radius: 14px;
+    background-color: hsl(var(--black)) !important;
+
+    &:has(.accordion-collapse.show) {
+      border-color: hsl(var(--base) / 0.55);
+    }
+  }
+
+  .accordion-header {
+    line-height: 1;
+  }
+
+  .accordion-button {
+    min-height: 64px;
+    padding: 20px 58px 20px 24px;
+    color: hsl(var(--heading-color));
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.35;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+      color: hsl(var(--heading-color));
+      background-color: transparent !important;
+      box-shadow: none;
+    }
+
+    &::after {
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      width: auto;
+      height: auto;
+      background-image: none;
+      color: hsl(var(--base-two));
+      font-family: 'Line Awesome Free';
+      font-weight: 900;
+      content: '\f067';
+      transform: translateY(-50%);
+    }
+
+    &[aria-expanded='true']::after {
+      content: '\f068';
+    }
+  }
+
+  .accordion-body {
+    padding: 0 24px 22px;
+    color: hsl(var(--body-color));
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+/* ================================= Accordion Css End =========================== */
