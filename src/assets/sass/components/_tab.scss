@@ -11,9 +11,9 @@
 
         .nav-link {
             color: hsl(var(--heading-color));
-            padding: 8px 25px;
+            padding: 14px 30px;
             background-color: transparent !important;
-            border-radius: 5px;
+            border-radius: 12px;
             transition: .4s;
             border: 1px solid hsl(var(--black) / .08) !important;
 
@@ -22,17 +22,17 @@
             }
 
             &.active {
-                color: hsl(var(--white));
-                background-color: hsl(var(--base-d-200)) !important;
+                color: hsl(var(--black));
+                background-color: hsl(var(--base)) !important;
                 border: 1px solid transparent !important;
 
                 &:hover {
-                    color: hsl(var(--white));
+                    color: hsl(var(--black));
                 }
             }
 
             &:hover {
-                color: hsl(var(--base));
+                color: hsl(var(--black));
             }
         }
 
