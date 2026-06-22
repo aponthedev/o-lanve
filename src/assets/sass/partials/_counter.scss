@@ -1,36 +1,98 @@
-/* ======================  Counter Section Start  ======================*/
+/* ====================== Counter Section Start ====================== */
 .counter-section {
-  background-color: hsl(var(--section-bg));
+  background-color: hsl(var(--section-bg) / 0.4);
+
+  &__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.62fr);
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 42px;
+
+    h2 {
+      max-width: 720px;
+      margin: 12px 0 0;
+      color: hsl(var(--heading-color));
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 850;
+      line-height: 1.08;
+    }
+
+    > p {
+      margin: 0;
+      padding-left: 28px;
+      border-left: 2px solid hsl(var(--base));
+      color: hsl(var(--body-color));
+      font-size: 16px;
+      line-height: 1.7;
+    }
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: hsl(var(--base-two));
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    i {
+      color: hsl(var(--base-two));
+      font-size: 19px;
+    }
+  }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
+    overflow: hidden;
+    border: 2px solid hsl(var(--base));
+    border-radius: 20px;
+    background-color: hsl(var(--white));
+    
   }
 
   &__item {
-    min-height: 190px;
-    padding: 26px;
-    border: 1px solid hsl(var(--border-color));
-    border-radius: 18px;
-    background-color: hsl(var(--black));
-    box-shadow: 0 18px 45px hsl(var(--white) / 0.06);
+    position: relative;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+  
+    transition: background-color 0.25s ease;
+
+    &:last-child { border-right: 0; }
+
+
+
+    &:hover {
+      background-color: hsl(var(--base) / 0.07);
+
+      &::before { transform: scaleX(1); }
+    }
 
     h3 {
+      min-height: 58px;
       display: flex;
       align-items: baseline;
-      margin: 24px 0 6px;
+      margin: 24px 0 8px;
       color: hsl(var(--heading-color));
-      font-size: clamp(38px, 5vw, 56px);
-      line-height: 1;
+      font-size: clamp(42px, 4vw, 58px);
       font-weight: 900;
+      line-height: 1;
     }
 
     p {
       margin: 0;
       color: hsl(var(--body-color));
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
     }
+
+    .odometer { display: inline-block; }
   }
 
   &__icon {
@@ -39,22 +101,53 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border: 1px solid hsl(var(--base) / 0.45);
+    border-radius: 8px;
     color: hsl(var(--black));
     background-color: hsl(var(--base));
+    box-shadow: 0 10px 24px hsl(var(--base) / 0.18);
     font-size: 25px;
   }
+
+  &__suffix { font-size: 0.72em; }
 }
 
 @media screen and (max-width: 991px) {
-  .counter-section__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .counter-section {
+    &__header {
+      grid-template-columns: 1fr;
+      gap: 22px;
+
+      > p {
+        max-width: 680px;
+        padding-left: 20px;
+      }
+    }
+
+    &__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    &__item {
+      &:nth-child(2) { border-right: 0; }
+      &:nth-child(n + 3) { border-top: 1px solid hsl(var(--border-color)); }
+    }
   }
 }
 
 @media screen and (max-width: 575px) {
-  .counter-section__grid {
-    grid-template-columns: 1fr;
+  .counter-section {
+    &__header { margin-bottom: 30px; }
+
+    &__grid { grid-template-columns: 1fr; }
+
+    &__item {
+      min-height: 190px;
+      padding: 26px;
+      border-right: 0;
+      border-bottom: 1px solid hsl(var(--border-color));
+
+      &:nth-child(n + 3) { border-top: 0; }
+      &:last-child { border-bottom: 0; }
+    }
   }
 }
-/* ======================  Counter Section End  ======================*/
+/* ====================== Counter Section End ====================== */
