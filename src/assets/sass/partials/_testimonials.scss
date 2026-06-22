@@ -1,6 +1,19 @@
 /* ======================  Testimonial Section Start  ======================*/
+.testimonial {
+    background-color: hsl(var(--white));
+
+    .section-heading__title,
+    .section-heading__desc {
+        color: hsl(var(--black));
+    }
+
+    .section-heading__desc {
+        opacity: 0.72;
+    }
+}
+
 .testimonial-eyebrow {
-    color: hsl(var(--base));
+    color: hsl(var(--black));
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
@@ -196,12 +209,11 @@
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    background: hsl(var(--base));
-   
+    background: hsl(var(--black));   
     display: flex;
     justify-content: center;
     align-items: center;
-    color: hsl(var(--black));
+    color: hsl(var(--base));
     border-radius: 8px;
     cursor: pointer;
     z-index: 10;
@@ -211,8 +223,8 @@
 
 .slider-prev-v2:hover,
 .slider-next-v2:hover {
-    background: hsl(var(--black));
-    color: hsl(var(--base));
+    background: hsl(var(--base));
+    color: hsl(var(--black));
 }
 
 .slider-prev-v2 {
