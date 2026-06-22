@@ -5,12 +5,16 @@
 
   .accordion-item {
     overflow: hidden;
-    border: 1px solid hsl(var(--border-color));
-    border-radius: 14px;
-    background-color: hsl(var(--black)) !important;
+    border: 1px solid hsl(var(--black) / 0.1);
+    border-radius: 16px;
+    background-color: hsl(var(--white)) !important;
+    box-shadow: 0 8px 25px hsl(var(--black) / 0.04);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 
     &:has(.accordion-collapse.show) {
-      border-color: hsl(var(--base) / 0.55);
+      border-color: hsl(var(--base));
+      background-color: hsl(var(--base) / 0.09) !important;
+      box-shadow: 0 14px 35px hsl(var(--black) / 0.08);
     }
   }
 
@@ -24,45 +28,84 @@
     color: hsl(var(--heading-color));
     background-color: transparent;
     box-shadow: none;
-    font-size: 17px;
-    font-weight: 900;
+    font-size: 20px;
+    font-weight: 600;
     line-height: 1.35;
+    transition: color 0.3s ease, background-color 0.3s ease;
 
-    &:focus {
-      box-shadow: none;
+    &:hover {
+      color: hsl(var(--base-two));
+    }
+
+    &:focus-visible {
+      z-index: 2;
+      box-shadow: inset 0 0 0 2px hsl(var(--base));
     }
 
     &:not(.collapsed) {
-      color: hsl(var(--heading-color));
-      background-color: transparent !important;
+      color: hsl(var(--black));
+      background-color: hsl(var(--base) / 0.09) !important;
       box-shadow: none;
     }
 
     &::after {
       position: absolute;
-      right: 24px;
+      right: 20px;
       top: 50%;
-      width: auto;
-      height: auto;
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
       background-image: none;
-      color: hsl(var(--base-two));
+      color: hsl(var(--heading-color));
+      background-color: hsl(var(--section-bg));
       font-family: 'Line Awesome Free';
+      font-size: 14px;
       font-weight: 900;
       content: '\f067';
       transform: translateY(-50%);
+      transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
     }
 
     &[aria-expanded='true']::after {
       content: '\f068';
+      color: hsl(var(--black));
+      background-color: hsl(var(--base));
+      transform: translateY(-50%) rotate(180deg);
     }
   }
 
   .accordion-body {
     padding: 0 24px 22px;
     color: hsl(var(--body-color));
-    background-color: transparent;
-    font-size: 16px;
+    background-color: hsl(var(--base) / 0.09);
+    font-size: 15px;
     line-height: 1.7;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .accordion {
+    gap: 10px;
+
+    .accordion-button {
+      min-height: 60px;
+      padding: 17px 52px 17px 18px;
+      font-size: 15px;
+
+      &::after {
+        right: 14px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .accordion-body {
+      padding: 0 18px 18px;
+      font-size: 14px;
+    }
   }
 }
 /* ================================= Accordion Css End =========================== */

@@ -1,35 +1,105 @@
-/* ======================  FAQ Section Start  ======================*/
-.faq {
-  background-color: hsl(var(--body-bg));
-
-  &__wrap {
-    display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: 46px;
-    align-items: start;
-  }
-
-  &__content {
-    h2 {
-      margin: 0;
-      color: hsl(var(--heading-color));
-      font-size: clamp(36px, 4vw, 54px);
-      line-height: 1.08;
-      font-weight: 900;
-    }
-
-    p {
-      margin: 18px 0 0;
-      color: hsl(var(--body-color));
-      font-size: 17px;
-      line-height: 1.75;
-    }
-  }
+/* ======================  Faq Section Start  ======================*/
+.faq__visual {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 24px;
 }
 
-@media screen and (max-width: 991px) {
-  .faq__wrap {
-    grid-template-columns: 1fr;
-  }
+.faq__visual > img:first-child {
+    width: 100%;
+    min-height: 560px;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
 }
-/* ======================  FAQ Section End  ======================*/
+
+@media screen and (max-width: 1399px) {
+    .faq__visual > img:first-child {
+        min-height: 440px;
+    }
+}
+
+.faq__question {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 130px;
+}
+
+.faq__contact {
+    background-color: hsl(var(--base));
+    padding: 28px 30px;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 22px;
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    max-width: 335px;
+}
+
+.faq__contact h3 {
+    margin-bottom: 16px;
+    color: hsl(var(--black));
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.18;
+}
+
+.faq__mail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    min-height: 42px;
+    padding: 10px 16px;
+    color: hsl(var(--white));
+    background-color: hsl(var(--black));
+    border-radius: 999px;
+    font-weight: 700;
+    line-height: 1;
+    transition: 0.25s ease;
+}
+
+.faq__mail i {
+    font-size: 14px;
+    transform: rotate(45deg);
+    transition: inherit;
+}
+
+.faq__mail:hover, .faq__mail:focus-visible {
+    color: hsl(var(--black));
+    background-color: hsl(var(--white));
+}
+
+.faq__mail:hover i, .faq__mail:focus-visible i {
+    transform: rotate(45deg) translateX(3px);
+}
+
+@media screen and (max-width: 767px) {
+    .faq__visual {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .faq__visual > img:first-child {
+        min-height: 420px;
+    }
+
+    .faq__contact {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        max-width: none;
+        padding: 22px;
+    }
+
+    .faq__contact h3 {
+        font-size: 24px;
+    }
+}
+/* ======================  Faq Section End  ======================*/
