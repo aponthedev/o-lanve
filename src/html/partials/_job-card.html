@@ -1,0 +1,52 @@
+<div class="col-lg-6">
+  <article class="job-card">
+    <div class="job-card__heading">
+      <div class="d-flex align-items-center gap-3">
+        <span class="job-card__thumb"><img src="@@image" alt="@@company client" /></span>
+        <div class="job-card__info__content">
+          <h3 class="job-card__info__name">@@company</h3>
+          <p class="job-card__info__desc"><span class="active-dot" aria-hidden="true"></span>Verified client</p>
+        </div>
+      </div>
+      <button class="bookmark__button" type="button" aria-label="Save @@title job">
+        <svg viewBox="0 0 25 25" aria-hidden="true">
+          <path d="M18.21 2H6.79A2.83 2.83 0 0 0 4 4.86V21.2a1.67 1.67 0 0 0 1 1.54 1.57 1.57 0 0 0 1.74-.27l5.35-4.74a.69.69 0 0 1 .86 0l5.35 4.74a1.59 1.59 0 0 0 1.74.27 1.67 1.67 0 0 0 1-1.54V4.86A2.83 2.83 0 0 0 18.21 2ZM20 21.2a.67.67 0 0 1-.39.63.61.61 0 0 1-.67-.1L13.59 17a1.69 1.69 0 0 0-2.18 0l-5.35 4.73a.61.61 0 0 1-.67.1.67.67 0 0 1-.39-.63V4.86A1.83 1.83 0 0 1 6.79 3h11.42A1.83 1.83 0 0 1 20 4.86Z" fill="currentColor" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="job-card__body-heading d-flex align-items-center justify-content-between">
+      <span class="badge badge--success">FEATURED</span>
+      <span class="job-card__time"><i class="fa-regular fa-clock" aria-hidden="true"></i> @@time</span>
+    </div>
+
+    <div class="job-card__content">
+      <h3 class="job-card__title">@@title</h3>
+      <p class="job-card__desc">@@description</p>
+
+      <div class="job-card__center">
+        <div class="job-card__center__item">
+          <h3 class="job-card__center__title">@@budget</h3>
+          <p class="job-card__center__desc">@@budgetType</p>
+        </div>
+        <span class="job-card__center__line"></span>
+        <div class="job-card__center__item">
+          <h3 class="job-card__center__title">@@experience</h3>
+          <p class="job-card__center__desc">@@experienceDetail</p>
+        </div>
+      </div>
+
+      <ul class="job-card__skills"><li class="job-card__skills__point">@@skillOne</li><li class="job-card__skills__point">@@skillTwo</li><li class="job-card__skills__point">@@skillThree</li></ul>
+      <div class="job-card__footer">
+        <p class="job-card__location">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M26.69 7.8c-1.97-4.13-6.03-6.74-10.6-6.8C11.51.94 7.45 3.46 5.41 7.6c-2.12 4.29-1.62 9.26 1.32 12.99l7.59 9.64a2.024 2.024 0 0 0 3.18 0l7.79-9.9c2.83-3.6 3.36-8.39 1.4-12.52zm-2.96 11.29-7.83 9.9-7.59-9.64c-2.45-3.11-2.87-7.28-1.1-10.86 1.7-3.44 4.95-5.48 8.71-5.48h.15c3.86.06 7.16 2.17 8.82 5.66s1.23 7.38-1.16 10.42z" fill="currentColor" />
+            <path d="M15.91 7.16c-3.01 0-5.46 2.45-5.46 5.46s2.45 5.46 5.46 5.46 5.46-2.45 5.46-5.46-2.45-5.46-5.46-5.46zm0 8.91a3.461 3.461 0 0 1 0-6.92 3.461 3.461 0 0 1 0 6.92z" fill="currentColor" />
+          </svg>
+          @@location
+        </p>
+        <a href="#" class="btn btn--base">View Job</a>
+      </div>
+    </div>
+  </article>
+</div>
