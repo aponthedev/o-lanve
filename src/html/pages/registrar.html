@@ -1,51 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title -->
-  <title>O-lance</title>
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/images/logo/favicon.png">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- Font awesome -->
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <!-- line awesome -->
-  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <!-- Swiper -->
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="assets/css/select2.min.css">
-  <!-- Main css -->
-  <link rel="stylesheet" href="assets/css/main.css">
-</head>
-
-<body>
-
-  <!--==================== Preloader Start ====================-->
-<div class="preloader">
-    <div class="loader__text" data-text="O-lance"></div>
-</div>
-<!--==================== Preloader End ====================-->
-
-
-
-  <!-- ==================== Scroll to Top Start ==================== -->
-  <a class="scroll-top"><i class="fas fa-angle-double-up"></i></a>
-  <!-- ==================== Scroll to Top End ==================== -->
-
-
-  <!--==========================  Overlay Start  ==========================-->
-  <div class="overlay"></div>
-  <!--==========================  Overlay End  ==========================-->
-
+@@include('../partials/_template-top.html')
 <main>
-  <!--==========================  Login Section Start  ==========================-->
+  <!--==========================  Register Section Start  ==========================-->
   <section class="account">
     <div class="account__shell">
       <aside class="account__visual">
@@ -77,34 +32,34 @@
         </div>
       </aside>
 
-      <section class="account__panel" aria-label="Create account form">
+      <section class="account__panel" aria-label="Register account form">
         <div class="account__card">
  
 
           <div class="account__header">            
-            <h2>Create your account</h2>
+            <h2>Join O-Lance today</h2>
             <p>
-              Start with a free account and connect with the right people for
-              your next project.
+              Create your profile, connect with trusted clients, and start
+              building better projects.
             </p>
 
             <div class="row">
               <div class="col-xl-4">
                 <a href="#" class="account__socials">
                   <span class="account__socials__thumb"><img src="assets/images/icons/google.png" alt="image"></span>
-                  Google
+                  Sign up with Google
                 </a>
               </div>
               <div class="col-xl-4">
                 <a href="#" class="account__socials">
                   <span class="account__socials__thumb"><img src="assets/images/icons/facebook.png" alt="image"></span>
-                  Facebook
+                  Sign up with Facebook
                 </a>
               </div>
               <div class="col-xl-4">
                 <a href="#" class="account__socials">
                   <span class="account__socials__thumb"><img src="assets/images/icons/linkedin.png" alt="image"></span>
-                  LinkedIn
+                  Sign up with LinkedIn
                 </a>
               </div>
              
@@ -113,6 +68,22 @@
 
           <form class="account-form" action="!">
             <div class="row gy-4">
+              <div class="col-sm-6">
+                <label class="form-label">First Name</label>
+                <input
+                  class="form-control form--control"
+                  type="text"
+                  placeholder="Enter first name"
+                />
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Last Name</label>
+                <input
+                  class="form-control form--control"
+                  type="text"
+                  placeholder="Enter last name"
+                />
+              </div>
               <div class="col-sm-12">
                 <label class="form-label">Email</label>
                 <input
@@ -121,7 +92,7 @@
                   placeholder="Enter your email"
                 />
               </div>
-              <div class="col-sm-12">
+              <div class="col-sm-6">
                 <div class="form-field password__field">
                   <label class="form-label">Password</label>
                   <div class="input-group input--group input-group-password">
@@ -139,6 +110,28 @@
                     </span>
                   </div>
                 </div>
+               
+              </div>
+              <div class="col-sm-6">
+                <div class="form-field password__field">
+                  <label class="form-label">Confirm Password</label>
+                  <div class="input-group input--group input-group-password">
+                    <input
+                      class="form-control form--control"
+                      type="password"
+                      placeholder="Confirm password"
+                    />
+                    <span class="password-show-hide" style="cursor: pointer">
+                      <i
+                        class="far fa-eye open-eye-icon"
+                        style="display: none"
+                      ></i>
+                      <i class="far fa-eye-slash close-eye-icon"></i>
+                    </span>
+                  </div>
+                </div>
+              
+              </div>
                 <div class="account-form__extra">
                   <div class="form-check">
                     <input
@@ -147,45 +140,25 @@
                       id="remember-me"
                     />
                     <label class="form-check-label" for="remember-me"
-                      >Remember Me</label
+                      >I agree to the terms and privacy policy.</label
                     >
                   </div>
                   <a href="#" class="account-form__forgot-link"
-                    >Forgot Password?</a
+                    >Already registered?</a
                   >
                 </div>
-              </div>
             </div>
             <button class="w-100 btn btn--base mt-4" type="submit">
-              Login now
+              Create Account
             </button>
             <p class="account-info text-center mt-4">
-          Don't have an account? <a href="registrar.html">Create now</a>
+          Already have an account? <a href="login.html">Login now</a>
         </p>
           </form>
         </div>
       </section>
     </div>
   </section>
-  <!--==========================  Login Section End  ==========================-->
+  <!--==========================  Register Section End  ==========================-->
 </main>
-<!-- Jquery js -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<!-- Bootstrap Bundle Js -->
-<script src="assets/js/boostrap.bundle.min.js"></script>
-<!-- Magnific Popup Js -->
-<script src="assets/js/magnific-popup.min.js"></script>
-<!-- Scrollreveal Js -->
-<script src="assets/js/scrollreveal.min.js"></script>
-<!-- Swiper Js -->
-<script src="assets/js/swiper-bundle.min.js"></script>
-<!-- Odometer Js -->
-<script src="assets/js/odometer.min.js"></script>
-<!-- Select2 Js -->
-<script src="assets/js/select2.min.js"></script>
-
-<!-- main js -->
-<script src="assets/js/main.js"></script>
-</body>
-
-</html>
+@@include('../partials/_template-bottom.html')

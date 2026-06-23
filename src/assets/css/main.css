@@ -9467,14 +9467,15 @@ input[type=number] {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 10px 14px;
+    gap: 8px;
+    padding: 10px 12px;
     border: 1px solid hsl(var(--black)/0.1);
     border-radius: 14px;
     color: hsl(var(--heading-color));
     background-color: #f7f9f8;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 800;
+    white-space: nowrap;
     transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
 
@@ -9486,9 +9487,9 @@ input[type=number] {
 }
 
 .account__socials__thumb {
-    width: 30px;
-    height: 30px;
-    flex: 0 0 30px;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
     display: grid;
     place-items: center;
     overflow: hidden;

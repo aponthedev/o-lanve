@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title>O-lance</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <!-- line awesome -->
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <!--==================== Preloader Start ====================-->
+<div class="preloader">
+    <div class="loader__text" data-text="O-lance"></div>
+</div>
+<!--==================== Preloader End ====================-->
+
+
+
+  <!-- ==================== Scroll to Top Start ==================== -->
+  <a class="scroll-top"><i class="fas fa-angle-double-up"></i></a>
+  <!-- ==================== Scroll to Top End ==================== -->
+
+
+  <!--==========================  Overlay Start  ==========================-->
+  <div class="overlay"></div>
+  <!--==========================  Overlay End  ==========================-->
+
+<!--==========================  Offcanvas Section Start  ==========================-->
+<div class="offcanvas__area">
+  <div class="offcanvas__topbar">
+    <a href="index.html"
+      ><img src="assets/images/logo/logo.png" alt="logo"
+    /></a>
+    <span class="menu__close"><i class="las la-times"></i></span>
+  </div>
+  <div class="offcanvas__main">
+    <div class="offcanvas__widgets">
+      <div class="offcanvas__language">
+        <div class="dropdown">
+          <div
+            role="button"
+            class="dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="language__item">
+              <img src="assets/images/english.png" alt="image" />
+              <p>English</p>
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/english.png" alt="image" />
+                <p>English</p>
+              </div>
+            </li>
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/bangla.png" alt="image" />
+                <p>Bangla</p>
+              </div>
+            </li>
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/hindi.png" alt="image" />
+                <p>Hindi</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas__login">
+        <a href="#" class="btn btn--base"
+          >Sign in
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_493_266)">
+                <mask
+                  id="mask0_493_266"
+                  style="mask-type: luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M0 0H20V20H0V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_493_266)">
+                  <path
+                    d="M16.1876 3.81264C15.3751 3.00004 14.4104 2.35544 13.3488 1.91565C12.2871 1.47587 11.1492 1.24951 10.0001 1.24951C8.85096 1.24951 7.71308 1.47587 6.65142 1.91565C5.58976 2.35544 4.62513 3.00004 3.8126 3.81264C3.6962 3.92974 3.63086 4.08815 3.63086 4.25327C3.63086 4.41838 3.6962 4.57679 3.8126 4.69389C3.92971 4.8103 4.08811 4.87564 4.25323 4.87564C4.41835 4.87564 4.57675 4.8103 4.69385 4.69389C5.74378 3.6476 7.0802 2.93588 8.53434 2.6486C9.98849 2.36132 11.4952 2.51137 12.8641 3.07979C14.233 3.64821 15.4028 4.60952 16.2258 5.84232C17.0487 7.07513 17.4879 8.52414 17.4879 10.0064C17.4879 11.4886 17.0487 12.9377 16.2258 14.1705C15.4028 15.4033 14.233 16.3646 12.8641 16.933C11.4952 17.5014 9.98849 17.6515 8.53434 17.3642C7.0802 17.0769 5.74378 16.3652 4.69385 15.3189C4.57675 15.2025 4.41835 15.1371 4.25323 15.1371C4.08811 15.1371 3.92971 15.2025 3.8126 15.3189C3.6962 15.436 3.63086 15.5944 3.63086 15.7595C3.63086 15.9246 3.6962 16.083 3.8126 16.2001C5.45529 17.8412 7.68259 18.7624 10.0045 18.7613C11.1542 18.7607 12.2926 18.5337 13.3545 18.0931C14.4165 17.6526 15.3813 17.0073 16.1939 16.1939C17.0064 15.3805 17.6508 14.4151 18.0902 13.3527C18.5297 12.2902 18.7556 11.1517 18.755 10.002C18.7544 8.85227 18.5274 7.71393 18.0869 6.65197C17.6463 5.59 17.001 4.6252 16.1876 3.81264Z"
+                    fill="#161616"
+                  />
+                  <path
+                    d="M9.86875 12.6814C9.81017 12.7395 9.76367 12.8086 9.73194 12.8848C9.70021 12.9609 9.68388 13.0426 9.68388 13.1251C9.68388 13.2076 9.70021 13.2893 9.73194 13.3655C9.76367 13.4416 9.81017 13.5108 9.86875 13.5689C9.92685 13.6274 9.99598 13.6739 10.0721 13.7057C10.1483 13.7374 10.23 13.7537 10.3125 13.7537C10.395 13.7537 10.4767 13.7374 10.5529 13.7057C10.629 13.6739 10.6981 13.6274 10.7562 13.5689L13.8812 10.4439C13.9398 10.3858 13.9863 10.3166 14.0181 10.2405C14.0498 10.1643 14.0661 10.0826 14.0661 10.0001C14.0661 9.91761 14.0498 9.83592 14.0181 9.75976C13.9863 9.68359 13.9398 9.61447 13.8812 9.55637L10.7562 6.43137C10.6386 6.31368 10.4789 6.24756 10.3125 6.24756C10.1461 6.24756 9.98644 6.31368 9.86875 6.43137C9.75106 6.54906 9.68494 6.70868 9.68494 6.87512C9.68494 7.04155 9.75106 7.20118 9.86875 7.31887L11.9312 9.37512H3.125C2.95924 9.37512 2.80027 9.44096 2.68306 9.55817C2.56585 9.67538 2.5 9.83436 2.5 10.0001C2.5 10.1659 2.56585 10.3248 2.68306 10.4421C2.80027 10.5593 2.95924 10.6251 3.125 10.6251H11.9312L9.86875 12.6814Z"
+                    fill="#161616"
+                  />
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_493_266">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs></svg></span
+        ></a>
+        <!-- <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div> -->
+      </div>
+    </div>
+    <div class="offcanvas__menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Find Jobs</a></li>
+        <li><a href="#">Find Talents</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--==========================  Offcanvas Section End  ==========================-->
+
+<!-- ==================== Header Start Here ==================== -->
+<header class="header__area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="header__main">
+          <div class="header__logo">
+            <a href="index.html"
+              ><img src="assets/images/logo/logo.png" alt="logo"
+            /></a>
+          </div>
+          <div class="header__menu">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="find-jobs.html">Find Jobs</a></li>
+              <li><a href="#">Find Talents</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="header__widgets">
+            <div class="dropdown">
+              <div
+                role="button"
+                class="dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div class="language__item">
+                  <img src="assets/images/english.png" alt="image" />
+                  <p>English</p>
+                </div>
+              </div>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="language__item dropdown-item">
+                    <img src="assets/images/english.png" alt="image" />
+                    <p>English</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="language__item dropdown-item">
+                    <img src="assets/images/bangla.png" alt="image" />
+                    <p>Bangla</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="language__item dropdown-item">
+                    <img src="assets/images/hindi.png" alt="image" />
+                    <p>Hindi</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="header__login">
+              <a href="login.html" class="btn btn--base btn--quote">
+                Get Free Quote
+                <span class="btn__icon" aria-hidden="true"><i class="las la-arrow-right"></i></span>
+              </a>
+              <!-- <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Account
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </div> -->
+            </div>
+          </div>
+          <span class="menu__open"><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ==================== Header End Here ==================== -->
+
+<main>
+
+    <!-- ==================== Breadcrumb Start Here ==================== -->
+<section class="breadcrumb">
+    <span class="breadcrumb__bg"><img src="../../assets/images/bg3.jpg" alt="image"></span>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="breadcrumb__wrapper">
+                    <h2 class="breadcrumb__title">About Us</h2>
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+                        <li class="breadcrumb__item"><span class="breadcrumb__item-dot"></span></li>
+                        <li class="breadcrumb__item"><span class="breadcrumb__item-text">About Us</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================== Breadcrumb End Here ==================== -->
+
+    <!--==========================  About Section Start  ==========================-->
+
+    <!--========================== Signup Role Section Start ==========================-->
+<section class="signup-role py-120">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2 class="section-heading__title">Join O-Lance from either side<br>of the marketplace</h2>
+      <p class="section-heading__desc">Hire expert help as a buyer or grow your independent career as a freelancer.</p>
+    </div>
+
+    <div class="signup-role__grid">
+      <article class="signup-role__card signup-role__card--buyer">
+        <div class="signup-role__content">
+          <div class="signup-role__role">
+            <span class="signup-role__role-icon"><i class="las la-shopping-cart"></i></span>
+            <div>
+              <span>For Buyers</span>
+              <i></i>
+            </div>
+          </div>
+
+          <p class="signup-role__description">Post projects, compare proposals, and work with proven specialists across every business skill.</p>
+
+          <ul class="signup-role__features">
+            <li><i class="las la-user-shield"></i><span>Access verified experts</span></li>
+            <li><i class="las la-comments"></i><span>Manage projects with ease</span></li>
+            <li><i class="las la-lock"></i><span>Pay securely by milestone</span></li>
+          </ul>
+<a href="#" class="btn btn--base btn--quote">
+               Create Buyer
+                <span class="btn__icon" aria-hidden="true"><i class="las la-arrow-right"></i></span>
+              </a>
+
+        </div>
+
+        <div class="signup-role__media">
+          <img src="assets/images/signup-role2.png" alt="Buyer managing a freelance project">
+        </div>
+      </article>
+
+      <article class="signup-role__card signup-role__card--freelancer">
+        <div class="signup-role__content">
+          <div class="signup-role__role">
+            <span class="signup-role__role-icon"><i class="las la-briefcase"></i></span>
+            <div>
+              <span>For Freelancers</span>
+              <i></i>
+            </div>
+          </div>
+
+          <p class="signup-role__description">Showcase your expertise, win quality projects, and build lasting relationships with global clients.</p>
+
+          <ul class="signup-role__features">
+            <li><i class="las la-search"></i><span>Find quality opportunities</span></li>
+            <li><i class="las la-globe"></i><span>Work with global clients</span></li>
+            <li><i class="las la-shield-alt"></i><span>Get paid securely</span></li>
+          </ul>
+
+         <a href="#" class="btn btn--base btn--quote">
+               Create Freelancer
+                <span class="btn__icon" aria-hidden="true"><i class="las la-arrow-right"></i></span>
+              </a>
+        </div>
+
+        <div class="signup-role__media">
+          <img src="assets/images/signup-role1.png" alt="Freelancer working remotely">
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+<!--========================== Signup Role Section End ==========================-->
+
+    <!--========================== Account Section Start ==========================-->
+<section class="account-section py-120">
+  <span class="account-section__bg"><img src="assets/images/bg2.jpg" alt="image"></span>
+  <div class="container">
+    <div class="account-section__wrap">
+      <div class="account-section__content">
+       
+        <h2>Build a freelance career on your terms</h2>
+        <p>Turn your expertise into meaningful work, connect with serious clients, and grow your reputation with every successful project.</p>
+
+        <ul class="account-section__list">
+          <li>
+            <i class="las la-id-card"></i>
+            <span><strong>Showcase your expertise</strong>Build a trusted profile with services, work samples, and client reviews.</span>
+          </li>
+          <li>
+            <i class="las la-bullseye"></i>
+            <span><strong>Find the right opportunities</strong>Discover projects matched to your skills, experience, and availability.</span>
+          </li>
+          <li>
+            <i class="las la-shield-alt"></i>
+            <span><strong>Work and get paid securely</strong>Use clear milestones and protected payments from start to delivery.</span>
+          </li>
+        </ul>
+
+        <div class="account-section__actions">
+          <a href="#" class="btn btn--base btn--quote">
+            Create Freelancer Profile
+            <span class="btn__icon" aria-hidden="true"><i class="las la-arrow-right"></i></span>
+          </a>
+          <a href="#" class="account-section__link">Browse Projects <i class="las la-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="account-section__visual">
+        <img src="assets/images/for-freelancers.png" alt="Freelancer building a career on O-Lance">
+
+        <div class="account-section__metric account-section__metric--projects">
+          <i class="las la-briefcase"></i>
+          <span><strong>18k+</strong>Projects completed</span>
+        </div>
+        <div class="account-section__metric account-section__metric--secure">
+          <i class="las la-user-shield"></i>
+          <span><strong>Protected</strong>Milestone payments</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--========================== Account Section End ==========================-->
+
+      <!--==========================  Faq Section Start  ==========================-->
+<section class="faq py-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <h2 class="section-heading__title justify-content-center">Questions? We Have Answers</h2>
+                    <p class="section-heading__desc">Learn how O-Lance makes it easier to hire specialists, manage
+                        projects, get paid, and build trusted working relationships.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center gy-4">
+            <div class="col-xl-6">
+                <div class="faq__accordion accordion" id="faqAccordion">
+                    <div class="faq__item accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="faq__button accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                                What can I do on O-Lance?
+                            </button>
+                        </h3>
+                        <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="faq__body accordion-body">
+                                Clients can hire skilled professionals for projects of any size, while freelancers can
+                                showcase their expertise, submit proposals, and grow their independent careers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="faq__button accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false"
+                                aria-controls="faqTwo">
+                                How do I start a new project?
+                            </button>
+                        </h3>
+                        <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq__body accordion-body">
+                                Describe your goals, required skills, budget, and deadline. Once published, relevant
+                                freelancers can send proposals for you to review and compare.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="faq__button accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false"
+                                aria-controls="faqThree">
+                                How do I choose the right professional?
+                            </button>
+                        </h3>
+                        <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq__body accordion-body">
+                                Review each freelancer's portfolio, experience, ratings, rate, and proposal. You can
+                                also message shortlisted candidates before making your final decision.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="faq__button accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqSix" aria-expanded="false"
+                                aria-controls="faqSix">
+                                When is a freelancer paid?
+                            </button>
+                        </h3>
+                        <div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq__body accordion-body">
+                                The client funds an agreed milestone before work starts. O-Lance releases the payment
+                                after the completed work has been submitted, reviewed, and approved.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="faq__button accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqSeven" aria-expanded="false"
+                                aria-controls="faqSeven">
+                                What if the delivery needs changes?
+                            </button>
+                        </h3>
+                        <div id="faqSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq__body accordion-body">
+                                Clients can request reasonable revisions based on the agreed project scope. Messages,
+                                files, and feedback remain organized in one workspace for easy reference.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__item accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="faq__button accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false"
+                                aria-controls="faqFour">
+                                Can I work with clients from other countries?
+                            </button>
+                        </h3>
+                        <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq__body accordion-body">
+                                Yes. O-Lance is built for global collaboration, helping clients and freelancers work
+                                together remotely across locations and time zones.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="faq__visual">
+                    <img src="assets/images/faq.png" alt="O-Lance professionals discussing a project">
+                    <img src="assets/images/faq-what.png" alt="" class="faq__question">
+                    <div class="faq__contact">
+                        <h3>Need More<br>Help?</h3>
+                        <a href="mailto:support@olance.com" class="faq__mail">Ask Support <i
+                                class="fa-solid fa-arrow-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==========================  Faq Section End  ==========================-->
+
+      <!--========================== Best Freelancers Section Start ==========================-->
+<section class="best-freelancers py-120">
+  <div class="best-freelancers__shape best-freelancers__shape--one" aria-hidden="true"></div>
+  <div class="best-freelancers__shape best-freelancers__shape--two" aria-hidden="true"></div>
+
+  <div class="container position-relative">
+    <div class="best-freelancers__header">
+      <div class="section-heading mb-0">
+        <span class="market-badge">Top-Rated Talent</span>
+        <h2 class="section-heading__title">Meet experts who make ideas happen</h2>
+        <p class="section-heading__desc">
+          Work with proven professionals selected for their expertise, reliability, and outstanding client results.
+        </p>
+      </div>
+
+      <a href="#" class="best-freelancers__explore">
+        Explore all talent
+        <i class="las la-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="best-freelancers__grid">
+      <article class="best-freelancers__card" tabindex="0">
+        <div class="best-freelancers__media">
+          <img src="assets/images/profile1.png" alt="Ethan Bennett, product designer">
+          <span class="best-freelancers__availability"><i></i> Available now</span>
+          <button class="best-freelancers__favorite" type="button" aria-label="Save Ethan Bennett's profile">
+            <i class="lar la-heart"></i>
+          </button>
+        </div>
+        <div class="best-freelancers__content">
+          <div class="best-freelancers__identity">
+            <div>
+              <h3>Ethan Bennett <span title="Verified professional"><i class="las la-check"></i></span></h3>
+              <p>Senior Product Designer</p>
+            </div>
+            <strong>$45<span>/hr</span></strong>
+          </div>
+          <div class="best-freelancers__skills">
+            <span>Figma</span><span>UX Research</span><span>Prototyping</span>
+          </div>
+          <div class="best-freelancers__stats">
+            <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+            <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+          </div>
+          <a class="best-freelancers__profile" href="#">View profile <i class="las la-arrow-up"></i></a>
+        </div>
+      </article>
+
+      <article class="best-freelancers__card" tabindex="0">
+        <div class="best-freelancers__media">
+          <img src="assets/images/profile2.png" alt="Aiden Wells, brand strategist">
+          <span class="best-freelancers__availability"><i></i> Available now</span>
+          <button class="best-freelancers__favorite" type="button" aria-label="Save Aiden Wells's profile">
+            <i class="lar la-heart"></i>
+          </button>
+        </div>
+        <div class="best-freelancers__content">
+          <div class="best-freelancers__identity">
+            <div>
+              <h3>Aiden Wells <span title="Verified professional"><i class="las la-check"></i></span></h3>
+              <p>Brand &amp; Growth Strategist</p>
+            </div>
+            <strong>$38<span>/hr</span></strong>
+          </div>
+          <div class="best-freelancers__skills">
+            <span>Strategy</span><span>Branding</span><span>Growth</span>
+          </div>
+          <div class="best-freelancers__stats">
+            <span><i class="las la-star"></i><b>4.8</b> (96)</span>
+            <span><i class="las la-briefcase"></i><b>48</b> jobs</span>
+          </div>
+          <a class="best-freelancers__profile" href="#">View profile <i class="las la-arrow-up"></i></a>
+        </div>
+      </article>
+
+      <article class="best-freelancers__card" tabindex="0">
+        <div class="best-freelancers__media">
+          <img src="assets/images/profile3.png" alt="Mateo Carter, frontend developer">
+          <span class="best-freelancers__availability"><i></i> Available now</span>
+          <button class="best-freelancers__favorite" type="button" aria-label="Save Mateo Carter's profile">
+            <i class="lar la-heart"></i>
+          </button>
+        </div>
+        <div class="best-freelancers__content">
+          <div class="best-freelancers__identity">
+            <div>
+              <h3>Mateo Carter <span title="Verified professional"><i class="las la-check"></i></span></h3>
+              <p>Frontend Developer</p>
+            </div>
+            <strong>$52<span>/hr</span></strong>
+          </div>
+          <div class="best-freelancers__skills">
+            <span>React</span><span>Next.js</span><span>TypeScript</span>
+          </div>
+          <div class="best-freelancers__stats">
+            <span><i class="las la-star"></i><b>5.0</b> (143)</span>
+            <span><i class="las la-briefcase"></i><b>71</b> jobs</span>
+          </div>
+          <a class="best-freelancers__profile" href="#">View profile <i class="las la-arrow-up"></i></a>
+        </div>
+      </article>
+
+      <article class="best-freelancers__card" tabindex="0">
+        <div class="best-freelancers__media">
+          <img src="assets/images/profile4.png" alt="Noah Parker, full-stack developer">
+          <span class="best-freelancers__availability"><i></i> Available now</span>
+          <button class="best-freelancers__favorite" type="button" aria-label="Save Noah Parker's profile">
+            <i class="lar la-heart"></i>
+          </button>
+        </div>
+        <div class="best-freelancers__content">
+          <div class="best-freelancers__identity">
+            <div>
+              <h3>Noah Parker <span title="Verified professional"><i class="las la-check"></i></span></h3>
+              <p>Full-Stack Developer</p>
+            </div>
+            <strong>$48<span>/hr</span></strong>
+          </div>
+          <div class="best-freelancers__skills">
+            <span>Node.js</span><span>Vue.js</span><span>AWS</span>
+          </div>
+          <div class="best-freelancers__stats">
+            <span><i class="las la-star"></i><b>4.9</b> (112)</span>
+            <span><i class="las la-briefcase"></i><b>55</b> jobs</span>
+          </div>
+          <a class="best-freelancers__profile" href="#">View profile <i class="las la-arrow-up"></i></a>
+        </div>
+      </article>
+    </div>
+
+    <a href="#" class="best-freelancers__explore best-freelancers__explore--mobile">
+      Explore all talent
+      <i class="las la-arrow-right"></i>
+    </a>
+  </div>
+</section>
+<!--========================== Best Freelancers Section End ==========================-->
+
+         <!--==========================  Testimonials Section Start  ==========================-->
+<section class="testimonial py-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-heading text-center">
+          <h2 class="section-heading__title">
+            Success Stories from
+            <span
+              >Our Community
+              <svg
+                class="svg__shape"
+                xmlns="http://www.w3.org/2000/svg"
+                width="477"
+                height="28"
+                viewBox="0 0 477 28"
+                fill="none"
+              >
+                <path
+                  d="M8.7063 -0.000482152C-2.88966 -0.000481645 -2.91454 10.7031 8.7063 10.7031C32.9185 10.7031 57.1306 11.425 81.3428 12.6198C65.9894 13.3416 50.6359 14.1382 35.3073 15.0094C23.8607 15.6566 23.7363 26.3602 35.3073 25.713C85.3243 22.9002 135.441 20.8093 185.607 19.4402C280.639 26.3353 375.572 32.7823 469.982 19.1166C480.159 17.648 477.497 8.86105 467.593 8.61213C373.009 6.09804 278.3 6.14784 183.79 8.78641C125.363 4.45519 66.935 -0.0253904 8.7063 0.0243962L8.7063 -0.000482152Z"
+                  fill="currentColor"
+                ></path></svg
+            ></span>
+          </h2>
+          <p class="section-heading__desc">
+            See how businesses and independent professionals turn great ideas
+            into meaningful results with O-Lance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-slider-container">
+      <div class="swiper testimonial-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-item-v2">
+              <div class="testimonial-item-v2__inner">
+                <div class="testimonial-item-v2__thumb">
+                  <img src="assets/images/user.jpg" alt="Portrait of Daniel Carter">
+                </div>
+                <div class="testimonial-item-v2__quote-top">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="testimonial-item-v2__content">
+                  <p class="testimonial-item-v2__text">
+                    "O-Lance helped us find a skilled product designer in less
+                    than a day. The process was clear, fast, and the final work
+                    exceeded our expectations."
+                  </p>
+                </div>
+                <div class="testimonial-item-v2__footer">
+                  <div class="testimonial-item-v2__info">
+                    <h4 class="testimonial-item-v2__name">Daniel Carter</h4>
+                    <p class="testimonial-item-v2__designation">
+                      Startup Founder
+                    </p>
+                  </div>
+                  <div class="testimonial-item-v2__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="testimonial-item-v2__quote-bottom">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item-v2">
+              <div class="testimonial-item-v2__inner">
+                <div class="testimonial-item-v2__thumb">
+                  <img src="assets/images/user2.jpg" alt="Portrait of Sophia Rahman">
+                </div>
+                <div class="testimonial-item-v2__quote-top">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="testimonial-item-v2__content">
+                  <p class="testimonial-item-v2__text">
+                    "The project tools keep every message, milestone, and file
+                    organized. I can focus on doing my best work while O-Lance
+                    handles the rest."
+                  </p>
+                </div>
+                <div class="testimonial-item-v2__footer">
+                  <div class="testimonial-item-v2__info">
+                    <h4 class="testimonial-item-v2__name">Sophia Rahman</h4>
+                    <p class="testimonial-item-v2__designation">
+                      UI/UX Designer
+                    </p>
+                  </div>
+                  <div class="testimonial-item-v2__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="testimonial-item-v2__quote-bottom">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item-v2">
+              <div class="testimonial-item-v2__inner">
+                <div class="testimonial-item-v2__thumb">
+                  <img src="assets/images/user.jpg" alt="Portrait of Marcus Wilson">
+                </div>
+                <div class="testimonial-item-v2__quote-top">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="testimonial-item-v2__content">
+                  <p class="testimonial-item-v2__text">
+                    "We needed a developer for a complex integration and found
+                    the perfect expert here. Communication was excellent and
+                    every milestone arrived on time."
+                  </p>
+                </div>
+                <div class="testimonial-item-v2__footer">
+                  <div class="testimonial-item-v2__info">
+                    <h4 class="testimonial-item-v2__name">Marcus Wilson</h4>
+                    <p class="testimonial-item-v2__designation">Product Manager</p>
+                  </div>
+                  <div class="testimonial-item-v2__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+                <div class="testimonial-item-v2__quote-bottom">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item-v2">
+              <div class="testimonial-item-v2__inner">
+                <div class="testimonial-item-v2__thumb">
+                  <img src="assets/images/user3.jpg" alt="Portrait of Aisha Khan">
+                </div>
+                <div class="testimonial-item-v2__quote-top">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="testimonial-item-v2__content">
+                  <p class="testimonial-item-v2__text">
+                    "O-Lance connects me with serious clients who value quality.
+                    Secure payments and clear project scopes have made growing
+                    my freelance business much easier."
+                  </p>
+                </div>
+                <div class="testimonial-item-v2__footer">
+                  <div class="testimonial-item-v2__info">
+                    <h4 class="testimonial-item-v2__name">Aisha Khan</h4>
+                    <p class="testimonial-item-v2__designation">
+                      Content Strategist
+                    </p>
+                  </div>
+                  <div class="testimonial-item-v2__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="testimonial-item-v2__quote-bottom">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item-v2">
+              <div class="testimonial-item-v2__inner">
+                <div class="testimonial-item-v2__thumb">
+                  <img src="assets/images/user4.jpg" alt="Portrait of Ethan Brooks">
+                </div>
+                <div class="testimonial-item-v2__quote-top">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="testimonial-item-v2__content">
+                  <p class="testimonial-item-v2__text">
+                    "Hiring through O-Lance gave our small team access to
+                    specialist talent without a lengthy recruitment process.
+                    We launched ahead of schedule."
+                  </p>
+                </div>
+                <div class="testimonial-item-v2__footer">
+                  <div class="testimonial-item-v2__info">
+                    <h4 class="testimonial-item-v2__name">Ethan Brooks</h4>
+                    <p class="testimonial-item-v2__designation">
+                      Marketing Director
+                    </p>
+                  </div>
+                  <div class="testimonial-item-v2__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="testimonial-item-v2__quote-bottom">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item-v2">
+              <div class="testimonial-item-v2__inner">
+                <div class="testimonial-item-v2__thumb">
+                  <img src="assets/images/user5.jpg" alt="Portrait of Elena Garcia">
+                </div>
+                <div class="testimonial-item-v2__quote-top">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="testimonial-item-v2__content">
+                  <p class="testimonial-item-v2__text">
+                    "From the first proposal to final approval, everything feels
+                    professional and transparent. It is now my favorite place
+                    to build long-term client relationships."
+                  </p>
+                </div>
+                <div class="testimonial-item-v2__footer">
+                  <div class="testimonial-item-v2__info">
+                    <h4 class="testimonial-item-v2__name">Elena Garcia</h4>
+                    <p class="testimonial-item-v2__designation">Web Developer</p>
+                  </div>
+                  <div class="testimonial-item-v2__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+                <div class="testimonial-item-v2__quote-bottom">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-prev-v2"><i class="fa-solid fa-angles-left"></i></div>
+      <div class="slider-next-v2"><i class="fa-solid fa-angles-right"></i></div>
+    </div>
+  </div>
+</section>
+<!--==========================  Testimonials Section End  ==========================-->
+
+        <!--========================== Blog Section Start ==========================-->
+<section class="blog py-120">
+  <div class="container">
+    <div class="blog__header">
+      <div class="blog__intro">
+        <h2 class="blog__heading">Catch Up on the Latest Insights</h2>
+        <p class="blog__subheading">Explore practical ideas for hiring, freelancing, and working better online.</p>
+      </div>
+      <a href="#" class="blog__view-all blog__view-all--desktop">Explore all articles <i class="blog__view-all-icon las la-arrow-up"></i></a>
+    </div>
+
+    <div class="blog__grid">
+      <article class="blog__article">
+        <a href="#" class="blog__thumb">
+          <img class="blog__image" src="assets/images/blog1.png" alt="Professional preparing a clear freelance project brief">
+          <span class="blog__category">Hiring</span>
+        </a>
+        <div class="blog__content">
+          <h3 class="blog__title"><a class="blog__title-link" href="#">How to Write a Project Brief Great Freelancers Will Answer</a></h3>
+          <p class="blog__description">Learn how to define your goals, scope, timeline, and budget so the right experts can respond with confidence.</p>
+          <a href="#" class="blog__link">Read more <i class="blog__link-icon las la-arrow-up"></i></a>
+        </div>
+      </article>
+
+      <article class="blog__article">
+        <a href="#" class="blog__thumb">
+          <img class="blog__image" src="assets/images/blog2.png" alt="Freelancer improving his professional online profile">
+          <span class="blog__category">Freelancing</span>
+        </a>
+        <div class="blog__content">
+          <h3 class="blog__title"><a class="blog__title-link" href="#">Five Profile Upgrades That Help You Win Better Clients</a></h3>
+          <p class="blog__description">Make your expertise easier to trust with a focused profile, stronger portfolio, and clearer service positioning.</p>
+          <a href="#" class="blog__link">Read more <i class="blog__link-icon las la-arrow-up"></i></a>
+        </div>
+      </article>
+
+      <article class="blog__article">
+        <a href="#" class="blog__thumb">
+          <img class="blog__image" src="assets/images/blog3.png" alt="Remote professional managing his freelance project">
+          <span class="blog__category">Productivity</span>
+        </a>
+        <div class="blog__content">
+          <h3 class="blog__title"><a class="blog__title-link" href="#">Simple Milestone Habits That Keep Remote Work on Track</a></h3>
+          <p class="blog__description">Use practical milestones, focused feedback, and regular updates to move every project smoothly toward delivery.</p>
+          <a href="#" class="blog__link">Read more <i class="blog__link-icon las la-arrow-up"></i></a>
+        </div>
+      </article>
+    </div>
+
+    <a href="#" class="blog__view-all blog__view-all--mobile">Explore all articles <i class="blog__view-all-icon las la-arrow-up"></i></a>
+  </div>
+</section>
+<!--========================== Blog Section End ==========================-->
+
+         <!--==========================  Cta Section Start  ==========================-->
+<section class="cta py-120">
+  <div class="container">
+    <div class="cta__wrap">
+      <span class="cta__glow cta__glow--one" aria-hidden="true"></span>
+      <span class="cta__glow cta__glow--two" aria-hidden="true"></span>
+
+      <div class="cta__content">
+        <span class="cta__eyebrow">
+          <span class="cta__eyebrow-dot"></span>
+          Start building today
+        </span>
+
+        <h2 class="cta__title">Great work starts with the <span>right connection.</span></h2>
+        <p class="cta__description">Join O-Lance to hire proven talent or discover projects that match your expertise—all in one trusted marketplace.</p>
+
+        <div class="cta__actions">
+          <a href="#" class="cta__btn cta__btn--primary">
+            Hire Talent
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#" class="cta__btn cta__btn--secondary">
+            Find Work
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <ul class="cta__benefits" aria-label="O-Lance benefits">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10l3 3 7-7"/></svg>No signup fee</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10l3 3 7-7"/></svg>Verified professionals</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10l3 3 7-7"/></svg>Secure payments</li>
+        </ul>
+      </div>
+
+      <div class="cta__proof" aria-label="O-Lance marketplace activity">
+        <div class="cta__proof-head">
+          <div>
+            <span>Marketplace activity</span>
+            <strong>Talent is ready when you are</strong>
+          </div>
+          <span class="cta__live"><i></i> Live</span>
+        </div>
+
+        <div class="cta__people">
+          <div class="cta__avatars" aria-hidden="true">
+            <img src="assets/images/profile1.png" alt="">
+            <img src="assets/images/profile2.png" alt="">
+            <img src="assets/images/profile3.png" alt="">
+            <span>+2k</span>
+          </div>
+          <p><strong>2,000+ experts</strong><br>available across top skills</p>
+        </div>
+
+        <div class="cta__stats">
+          <div><strong>10k+</strong><span>Projects posted</span></div>
+          <div><strong>4.9/5</strong><span>Average rating</span></div>
+        </div>
+
+        <div class="cta__match">
+          <span class="cta__match-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 7l-9 9-4-4M16 7h4v4"/></svg>
+          </span>
+          <div><strong>Your next great match</strong><span>could be one click away</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==========================  Cta Section End  ==========================-->
+
+
+    <!--==========================  About Section End  ==========================-->
+
+</main>
+<!--==========================  Footer Section Start  ==========================-->
+<footer class="footer">
+    <div class="footer__video">
+        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+            <source src="assets/images/footer.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <div class="container">
+        <div class="footer__main">
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo">
+                    <img src="assets/images/logo/logo.png" alt="O-Lance">
+                </a>
+                <p class="footer__about">
+                    O-Lance connects businesses with skilled freelancers for design, development, marketing, writing,
+                    and support projects.
+                </p>
+
+                <div class="footer__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__links-wrap">
+                <div class="footer__column">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About O-Lance</a></li>
+                        <li><a href="#">Find Talent</a></li>
+                        <li><a href="#">Browse Projects</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Our Services</h3>
+                    <ul class="footer__list">
+                        <li><a href="#">Verified Freelancers</a></li>
+                        <li><a href="#">Project Matching</a></li>
+                        <li><a href="#">Secure Payments</a></li>
+                        <li><a href="#">Remote Teams</a></li>
+                        <li><a href="#">Client Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column footer__column--contact">
+                    <h3 class="footer__title">Get in Touch</h3>
+                    <div class="footer__contact-list">
+                        <div class="footer__contact-card">
+                            <span class="footer__contact-icon"><i class="fas fa-headset"></i></span>
+                            <div>
+                                <a href="tel:+18005550198">+1 800 555 0198</a>
+                                <a href="mailto:support@olance.com">support@olance.com</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__contact-card">
+                            <span class="footer__contact-icon"><i class="fas fa-location-dot"></i></span>
+                            <p>44 Market Street, San Francisco, CA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__cta">
+            <div class="footer__cta-content">
+                <h2>Get fresh talent updates and hiring tips</h2>
+            </div>
+
+            <form class="footer__newsletter" action="#">
+                <label class="sr-only" for="footerEmail">Email address</label>
+                <input type="email" id="footerEmail" placeholder="Enter your email" required>
+                <button type="submit" aria-label="Subscribe">
+                    <i class="fa-regular fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="footer__bottom">
+            <p>Copyright &copy; 2026 All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<!--==========================  Footer Section End  ==========================-->
+
+<!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap Bundle Js -->
+<script src="assets/js/boostrap.bundle.min.js"></script>
+<!-- Magnific Popup Js -->
+<script src="assets/js/magnific-popup.min.js"></script>
+<!-- Scrollreveal Js -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<!-- Swiper Js -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- Odometer Js -->
+<script src="assets/js/odometer.min.js"></script>
+<!-- Select2 Js -->
+<script src="assets/js/select2.min.js"></script>
+
+<!-- main js -->
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
