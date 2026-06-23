@@ -1,0 +1,516 @@
+/* ====================== Account Auth Start ====================== */
+.account {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background:
+    radial-gradient(circle at top left, hsl(var(--base) / 0.18), transparent 34%),
+    linear-gradient(135deg, #f4f7f3 0%, #eef2f6 100%);
+
+  &__shell {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(440px, 0.86fr);
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid hsl(var(--black) / 0.08);
+    border-radius: 0;
+    background: hsl(var(--white));
+    box-shadow: 0 28px 80px hsl(215 30% 18% / 0.12);
+  }
+
+  &__visual {
+    position: relative;
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 42px;
+    border-radius: 22px;
+    color: hsl(var(--white));
+    background:
+      linear-gradient(180deg, hsl(160 45% 10% / 0.2) 0%, hsl(160 55% 8% / 0.88) 100%),
+      url("../images/login-visual.png") center / cover no-repeat;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: auto 28px 28px;
+      height: 1px;
+      background: linear-gradient(90deg, hsl(var(--white) / 0.68), transparent);
+
+      @include lg-screen {
+      display: none;
+      }
+    }
+  }
+
+  &__brand,
+  &__visual-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__brand {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: hsl(var(--white));
+    font-size: 22px;
+    font-weight: 850;
+  }
+
+  &__brand-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: hsl(var(--black));
+    background: hsl(var(--base));
+    box-shadow: 0 14px 30px hsl(var(--base) / 0.28);
+  }
+
+  &__visual-content {
+    max-width: 580px;
+
+    @include md-screen {
+      margin-top: 30px;
+    }
+
+    h1 {
+      margin: 14px 0 18px;
+      color: hsl(var(--white));
+      font-size: 68px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0;
+
+      @include xl-screen{
+        font-size: 50px;
+        font-weight: 500;
+      }
+
+      @include xsm-screen{
+             font-size: 30px;
+        font-weight: 500;
+      }
+
+    
+    }
+
+    p {
+      max-width: 500px;
+      margin: 0;
+      color: hsl(var(--white) / 0.86);
+      font-size: 19px;
+      line-height: 1.55;
+    }
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    padding: 8px 13px;
+    border: 1px solid hsl(var(--white) / 0.24);
+    border-radius: 999px;
+    color: hsl(var(--white));
+    background: hsl(var(--white) / 0.12);
+    font-size: 13px;
+    font-weight: 800;
+    backdrop-filter: blur(12px);
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 470px;
+    margin-top: 34px;
+
+    div {
+      padding: 18px;
+      border: 1px solid hsl(var(--white) / 0.2);
+      border-radius: 16px;
+      background: hsl(var(--white) / 0.12);
+      backdrop-filter: blur(14px);
+
+      @include md-screen {
+        padding: 10px;
+      }
+    }
+
+    strong,
+    span {
+      display: block;
+    }
+
+    strong {
+      color: hsl(var(--base));
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+
+      @include lg-screen{
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    span {
+      margin-top: 8px;
+      color: hsl(var(--white) / 0.82);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+  }
+
+  &__panel {
+    display: grid;
+    align-items: center;
+    padding: 52px 44px;
+  }
+
+  &__card {
+    width: min(670px, 100%);
+    margin: 0 auto;
+  }
+
+  &__switch {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0 auto 42px;
+    padding: 5px;
+    border: 1px solid hsl(var(--black) / 0.08);
+    border-radius: 999px;
+    background: #f2f5f3;
+
+    a {
+      min-width: 92px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      color: hsl(var(--heading-color));
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+
+      &.active {
+        color: hsl(var(--black));
+        background: hsl(var(--base));
+        box-shadow: 0 10px 20px hsl(var(--base) / 0.26);
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 30px;
+    text-align: center;
+
+    > span {
+      color: hsl(var(--base-two));
+      font-size: 14px;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 8px 0 12px;
+      color: hsl(var(--heading-color));
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: 0;
+
+      @include lg-screen{
+            font-size: 30px;
+    font-weight: 500;
+      }
+    }
+
+    p {
+      max-width: 620px;
+      margin: 0;
+      color: hsl(var(--paragraph-color));
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .row {
+      --bs-gutter-x: 14px;
+      --bs-gutter-y: 12px;
+      margin-top: 24px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: 16px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+
+
+  &__check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: hsl(var(--paragraph-color));
+    font-size: 14px;
+    line-height: 1.4;
+
+    input {
+      width: 17px;
+      height: 17px;
+      accent-color: hsl(var(--base-two));
+    }
+  }
+
+  &__submit {
+    height: 56px;
+    border: 0;
+    border-radius: 14px;
+    color: hsl(var(--black));
+    background: hsl(var(--base));
+    box-shadow: 0 14px 28px hsl(var(--base) / 0.28);
+    font-size: 15px;
+    font-weight: 900;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px hsl(var(--base) / 0.32);
+    }
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 8px 0 0;
+    color: hsl(var(--paragraph-color));
+    font-size: 13px;
+    font-weight: 700;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: hsl(var(--black) / 0.09);
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+
+    a {
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border: 1px solid hsl(var(--black) / 0.08);
+      border-radius: 14px;
+      color: hsl(var(--heading-color));
+      background: hsl(var(--white));
+      font-size: 18px;
+      transition: transform 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+
+      &:hover {
+        border-color: hsl(var(--base-two));
+        color: hsl(var(--base-two));
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .account {
+    &__shell {
+      grid-template-columns: minmax(0, 1fr) minmax(390px, 0.9fr);
+    }
+
+    &__visual {
+      min-height: 660px;
+      padding: 34px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .account {
+    padding: 0;
+
+    &__shell {
+      grid-template-columns: 1fr;
+    }
+
+    &__visual {
+      min-height: 500px;
+    }
+
+    &__panel {
+      padding: 34px 16px 42px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .account {
+    &__shell {
+      gap: 8px;
+      padding: 8px;
+      border-radius: 22px;
+    }
+
+    &__visual {
+      min-height: 440px;
+      padding: 24px;
+      border-radius: 18px;
+    }
+
+    &__visual-content p {
+      font-size: 16px;
+    }
+
+    &__stats,
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__switch {
+      width: 100%;
+
+      a {
+        flex: 1;
+        min-width: 0;
+      }
+    }
+  }
+}
+
+.account-form {
+  .row {
+    --bs-gutter-y: 20px;
+  }
+
+  .form-label {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .form-control {
+    height: 54px;
+    padding: 0 18px;
+    background-color: hsl(var(--white));
+    border-color: hsl(var(--black) / 0.12);
+    border-width: 1px;
+    font-size: 15px;
+
+    &:focus {
+      border-color: hsl(var(--base));
+      box-shadow: 0 0 0 4px hsl(var(--base) / 0.15);
+    }
+  }
+
+  .input-group {
+    border: 0;
+
+    .form-control {
+      border: 1px solid hsl(var(--black) / 0.12) !important;
+      border-radius: 16px !important;
+
+      &:focus {
+        border-color: hsl(var(--base)) !important;
+      }
+    }
+  }
+
+  .password-show-hide {
+    right: 18px;
+  }
+
+  .btn {
+    height: 56px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 800;
+  }
+}
+
+.account-form__extra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.account-form__forgot-link {
+  color: hsl(var(--heading-color));
+  font-size: 15px;
+  font-weight: 700;
+
+  &:hover {
+    color: hsl(var(--base-two));
+  }
+}
+
+.account__socials {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid hsl(var(--black) / 0.1);
+  border-radius: 14px;
+  color: hsl(var(--heading-color));
+  background-color: #f7f9f8;
+  font-size: 15px;
+  font-weight: 800;
+  transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+
+  &:hover {
+    border-color: hsl(var(--base-two));
+    color: hsl(var(--base-two));
+    box-shadow: 0 12px 24px hsl(var(--black) / 0.06);
+    transform: translateY(-2px);
+  }
+}
+
+.account__socials__thumb {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .account-form__extra {
+    align-items: flex-start;
+   
+  }
+}
+/* ====================== Account Auth End ====================== */

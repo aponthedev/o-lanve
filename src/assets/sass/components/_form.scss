@@ -40,13 +40,13 @@ label.required:after {
 
 /* Form Control Start */
 .form-control {
-  border-radius: 5px;
+  border-radius: 16px;
   font-weight: 400;
   outline: none;
   width: 100%;
   padding: 14px 18px;
   background-color: transparent;
-  border: 1px solid hsl(var(--black) / 0.1);
+  border: 2px solid hsl(var(--black) / 0.1);
   color: hsl(var(--black));
   line-height: 1;
 
@@ -57,7 +57,7 @@ label.required:after {
 
   &:focus {
     background-color:transparent !important;
-    border-color: hsl(var(--black) / 0.2);
+    border-color: hsl(var(--base));
     box-shadow: none;
   }
 
@@ -73,6 +73,8 @@ label.required:after {
 
     &:focus {
       color: hsl(var(--black));
+      border: 1px solid hsl(var(--base));
+      
     }
   }
 
@@ -192,6 +194,7 @@ input[type='number'] {
       background-color: hsl(var(--base)) !important;
       border-color: hsl(var(--base)) !important;
       box-shadow: none;
+      color: hsl(var(--black)) !important;
 
       &[type='checkbox'] {
         background-image: none;
@@ -202,7 +205,7 @@ input[type='number'] {
         content: '\f00c';
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
-        color: hsl(var(--white));
+        color: hsl(var(--black));
         font-size: 11px;
         top: 50%;
         left: 50%;
@@ -319,6 +322,7 @@ input[type='number'] {
 
     &:checked {
       background-color: hsl(var(--base)) !important;
+      color: hsl(var(--black));
 
       &::before {
         left: calc(100% - 26px);
@@ -345,8 +349,8 @@ input[type='number'] {
 /* --======================Custom Input group Start ======================*/
 
 .input-group {
-  border-radius: 5px;
-  border: 1px solid hsl(var(--black) / 0.1);
+  border-radius: 12px;
+  border: 2px solid hsl(var(--black) / 0.1);
 
   &> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-left: 0;
@@ -370,7 +374,7 @@ input[type='number'] {
   }
 
   &:focus-within {
-    border: 1px solid hsl(var(--black) / 0.2);
+    border: 2px solid hsl(var(--base));
   }
 
   .input-group-text {

@@ -1,9 +1,30 @@
 /* ====================== Breadcrumb Css Start ==================== */
 .breadcrumb {
-  background-color: hsl(var(--warning));
+  position: relative;
+  z-index: 1;
   margin-bottom: 0;
   padding-top: 150px;
   padding-bottom: 100px;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    background-color: hsl(var(--black) / 0.8);
+    backdrop-filter: blur(5px);
+  }
+
+  &__bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
 
   &__wrapper {
     text-align: center;
@@ -11,7 +32,7 @@
 
   &__title {
     margin-bottom: 10px;
-    color: hsl(var(--black));
+    color: hsl(var(--white));
   }
 
   &__list {
@@ -31,7 +52,7 @@
     &-dot {
       width: 6px;
       height: 6px;
-      background-color: hsl(var(--black));
+      background-color: hsl(var(--base));
       border-radius: 50%;
     }
 
@@ -41,7 +62,7 @@
   }
 
   &__link {
-    color: hsl(var(--black));
+    color: hsl(var(--white));
     font-weight: 500;
 
     &:hover {

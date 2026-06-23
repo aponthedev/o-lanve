@@ -1,0 +1,152 @@
+@@include('../partials/_template-top.html')
+@@include('../partials/_header.html')
+<main>
+  @@include('../partials/_breadcrumb.html', { "breadcrumbText": "Contact Us" })
+
+  <!--==========================  Contact Section Start  ==========================-->
+  <section class="contact-page py-60">
+    <div class="container">
+      <div class="contact-page__quick">
+        <div class="contact-card">
+          <span class="contact-card__icon"
+            ><i class="fa-regular fa-envelope"></i
+          ></span>
+          <div class="contact-card__content">
+            <span class="contact-card__label">Email us</span>
+            <a href="mailto:support@realvest.com">support@realvest.com</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-card__icon"
+            ><i class="fa-solid fa-phone-volume"></i
+          ></span>
+          <div class="contact-card__content">
+            <span class="contact-card__label">Call directly</span>
+            <a href="tel:+18005550198">+1 800 555 0198</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-card__icon"
+            ><i class="fa-solid fa-location-dot"></i
+          ></span>
+          <div class="contact-card__content">
+            <span class="contact-card__label">Visit office</span>
+            <p>44 Market Street, San Francisco, CA</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-page__body">
+        <div class="contact-page__panel">
+          <div class="contact-page__panel-header">
+            <h3 class="contact-page__panel-title">Send us a message</h3>
+            <p class="contact-page__panel-text">
+              Fill out the form below and our team will get back to you as soon
+              as possible.
+            </p>
+          </div>
+
+          <form class="contact-form" action="#">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="+1 800 555 0198"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="How can we help?"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  rows="6"
+                  placeholder="Share your property goals, questions, or support needs..."
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <div class="contact-form__footer">
+                  <p class="contact-form__note">
+                    By submitting this form, you agree to be contacted by our
+                    team regarding your request.
+                  </p>
+
+                  <button class="btn btn--base btn--quote">
+                    Send Message
+                    <span class="btn__icon" aria-hidden="true"
+                      ><i class="las la-arrow-right"></i
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-page__side">
+          <div class="contact-page__meta">
+            <div class="contact-page__meta-item">
+              <strong>Business Hours</strong>
+              <span>Mon - Fri, 9:00 AM - 6:00 PM</span>
+            </div>
+            <div class="contact-page__meta-item">
+              <strong>Priority Support</strong>
+              <span>Available for active investors and partners</span>
+            </div>
+          </div>
+
+          <div class="contact-page__stats">
+            <div>
+              <strong>24h</strong>
+              <span>Average reply</span>
+            </div>
+            <div>
+              <strong>120+</strong>
+              <span>Investor requests handled</span>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <div class="contact-map__frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17021.35612112439!2d-0.11089339000366367!3d51.51606324967559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1761030147735!5m2!1sen!2sbd"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--==========================  Contact Section End  ==========================-->
+</main>
+@@include('../partials/_footer.html')
+@@include('../partials/_template-bottom.html')
