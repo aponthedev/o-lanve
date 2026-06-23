@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title>O-lance</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <!-- line awesome -->
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <!--==================== Preloader Start ====================-->
+<div class="preloader">
+    <div class="loader__text" data-text="O-lance"></div>
+</div>
+<!--==================== Preloader End ====================-->
+
+
+
+  <!-- ==================== Scroll to Top Start ==================== -->
+  <a class="scroll-top"><i class="fas fa-angle-double-up"></i></a>
+  <!-- ==================== Scroll to Top End ==================== -->
+
+
+  <!--==========================  Overlay Start  ==========================-->
+  <div class="overlay"></div>
+  <!--==========================  Overlay End  ==========================-->
+
+<!--==========================  Offcanvas Section Start  ==========================-->
+<div class="offcanvas__area">
+  <div class="offcanvas__topbar">
+    <a href="index.html"
+      ><img src="assets/images/logo/logo.png" alt="logo"
+    /></a>
+    <span class="menu__close"><i class="las la-times"></i></span>
+  </div>
+  <div class="offcanvas__main">
+    <div class="offcanvas__widgets">
+      <div class="offcanvas__language">
+        <div class="dropdown">
+          <div
+            role="button"
+            class="dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="language__item">
+              <img src="assets/images/english.png" alt="image" />
+              <p>English</p>
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/english.png" alt="image" />
+                <p>English</p>
+              </div>
+            </li>
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/bangla.png" alt="image" />
+                <p>Bangla</p>
+              </div>
+            </li>
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/hindi.png" alt="image" />
+                <p>Hindi</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas__login">
+        <a href="#" class="btn btn--base"
+          >Sign in
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_493_266)">
+                <mask
+                  id="mask0_493_266"
+                  style="mask-type: luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M0 0H20V20H0V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_493_266)">
+                  <path
+                    d="M16.1876 3.81264C15.3751 3.00004 14.4104 2.35544 13.3488 1.91565C12.2871 1.47587 11.1492 1.24951 10.0001 1.24951C8.85096 1.24951 7.71308 1.47587 6.65142 1.91565C5.58976 2.35544 4.62513 3.00004 3.8126 3.81264C3.6962 3.92974 3.63086 4.08815 3.63086 4.25327C3.63086 4.41838 3.6962 4.57679 3.8126 4.69389C3.92971 4.8103 4.08811 4.87564 4.25323 4.87564C4.41835 4.87564 4.57675 4.8103 4.69385 4.69389C5.74378 3.6476 7.0802 2.93588 8.53434 2.6486C9.98849 2.36132 11.4952 2.51137 12.8641 3.07979C14.233 3.64821 15.4028 4.60952 16.2258 5.84232C17.0487 7.07513 17.4879 8.52414 17.4879 10.0064C17.4879 11.4886 17.0487 12.9377 16.2258 14.1705C15.4028 15.4033 14.233 16.3646 12.8641 16.933C11.4952 17.5014 9.98849 17.6515 8.53434 17.3642C7.0802 17.0769 5.74378 16.3652 4.69385 15.3189C4.57675 15.2025 4.41835 15.1371 4.25323 15.1371C4.08811 15.1371 3.92971 15.2025 3.8126 15.3189C3.6962 15.436 3.63086 15.5944 3.63086 15.7595C3.63086 15.9246 3.6962 16.083 3.8126 16.2001C5.45529 17.8412 7.68259 18.7624 10.0045 18.7613C11.1542 18.7607 12.2926 18.5337 13.3545 18.0931C14.4165 17.6526 15.3813 17.0073 16.1939 16.1939C17.0064 15.3805 17.6508 14.4151 18.0902 13.3527C18.5297 12.2902 18.7556 11.1517 18.755 10.002C18.7544 8.85227 18.5274 7.71393 18.0869 6.65197C17.6463 5.59 17.001 4.6252 16.1876 3.81264Z"
+                    fill="#161616"
+                  />
+                  <path
+                    d="M9.86875 12.6814C9.81017 12.7395 9.76367 12.8086 9.73194 12.8848C9.70021 12.9609 9.68388 13.0426 9.68388 13.1251C9.68388 13.2076 9.70021 13.2893 9.73194 13.3655C9.76367 13.4416 9.81017 13.5108 9.86875 13.5689C9.92685 13.6274 9.99598 13.6739 10.0721 13.7057C10.1483 13.7374 10.23 13.7537 10.3125 13.7537C10.395 13.7537 10.4767 13.7374 10.5529 13.7057C10.629 13.6739 10.6981 13.6274 10.7562 13.5689L13.8812 10.4439C13.9398 10.3858 13.9863 10.3166 14.0181 10.2405C14.0498 10.1643 14.0661 10.0826 14.0661 10.0001C14.0661 9.91761 14.0498 9.83592 14.0181 9.75976C13.9863 9.68359 13.9398 9.61447 13.8812 9.55637L10.7562 6.43137C10.6386 6.31368 10.4789 6.24756 10.3125 6.24756C10.1461 6.24756 9.98644 6.31368 9.86875 6.43137C9.75106 6.54906 9.68494 6.70868 9.68494 6.87512C9.68494 7.04155 9.75106 7.20118 9.86875 7.31887L11.9312 9.37512H3.125C2.95924 9.37512 2.80027 9.44096 2.68306 9.55817C2.56585 9.67538 2.5 9.83436 2.5 10.0001C2.5 10.1659 2.56585 10.3248 2.68306 10.4421C2.80027 10.5593 2.95924 10.6251 3.125 10.6251H11.9312L9.86875 12.6814Z"
+                    fill="#161616"
+                  />
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_493_266">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs></svg></span
+        ></a>
+        <!-- <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div> -->
+      </div>
+    </div>
+    <div class="offcanvas__menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Find Jobs</a></li>
+        <li><a href="#">Find Talents</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--==========================  Offcanvas Section End  ==========================-->
+
+<!-- ==================== Header Start Here ==================== -->
+<header class="header__area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="header__main">
+          <div class="header__logo">
+            <a href="index.html"
+              ><img src="assets/images/logo/logo.png" alt="logo"
+            /></a>
+          </div>
+          <div class="header__menu">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="find-jobs.html">Find Jobs</a></li>
+              <li><a href="#">Find Talents</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="header__widgets">
+            <div class="dropdown">
+              <div
+                role="button"
+                class="dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div class="language__item">
+                  <img src="assets/images/english.png" alt="image" />
+                  <p>English</p>
+                </div>
+              </div>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="language__item dropdown-item">
+                    <img src="assets/images/english.png" alt="image" />
+                    <p>English</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="language__item dropdown-item">
+                    <img src="assets/images/bangla.png" alt="image" />
+                    <p>Bangla</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="language__item dropdown-item">
+                    <img src="assets/images/hindi.png" alt="image" />
+                    <p>Hindi</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="header__login">
+              <a href="login.html" class="btn btn--base btn--quote">
+                Get Free Quote
+                <span class="btn__icon" aria-hidden="true"><i class="las la-arrow-right"></i></span>
+              </a>
+              <!-- <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Account
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </div> -->
+            </div>
+          </div>
+          <span class="menu__open"><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ==================== Header End Here ==================== -->
+
+<main>
+
+     <!-- ==================== Breadcrumb Start Here ==================== -->
+<section class="breadcrumb">
+    <span class="breadcrumb__bg"><img src="../../assets/images/bg3.jpg" alt="image"></span>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="breadcrumb__wrapper">
+                    <h2 class="breadcrumb__title">Find Jobs</h2>
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+                        <li class="breadcrumb__item"><span class="breadcrumb__item-dot"></span></li>
+                        <li class="breadcrumb__item"><span class="breadcrumb__item-text">Find Jobs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================== Breadcrumb End Here ==================== -->
+  <!--========================== Find Jobs Section Start ==========================-->
+  <section class="find-jobs">
+
+
+    <div class="find-jobs__body py-60">
+      <div class="container">
+        <div class="find-jobs__layout">
+          <aside class="find-jobs__sidebar">
+            <h3 class="find-jobs__filter-title">Filter</h3>
+
+            <div class="find-jobs__group">
+              <h4>Keyword</h4>
+              <label class="find-jobs__keyword">
+                <input type="text" placeholder="Search jobs...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </label>
+            </div>
+
+            <div class="find-jobs__group">
+              <h4>Job Categories</h4>
+              <label><input type="checkbox"> <span>Design & Creative</span> <b>23</b></label>
+              <label><input type="checkbox"> <span>Web Development</span> <b>42</b></label>
+              <label><input type="checkbox"> <span>Writing & Translation</span> <b>18</b></label>
+              <label><input type="checkbox"> <span>Digital Marketing</span> <b>15</b></label>
+              <label><input type="checkbox"> <span>Video & Animation</span> <b>11</b></label>
+              <button class="find-jobs__more" type="button">More Categories <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+
+            <div class="find-jobs__group">
+              <h4>Experience Level</h4>
+              <label><input type="checkbox"> <span>Entry Level</span> <b>32</b></label>
+              <label><input type="checkbox"> <span>Intermediate</span> <b>45</b></label>
+              <label><input type="checkbox"> <span>Expert</span> <b>28</b></label>
+            </div>
+
+            <div class="find-jobs__group">
+              <h4>Job Type</h4>
+              <label><input type="checkbox"> <span>Hourly</span> <b>52</b></label>
+              <label><input type="checkbox"> <span>Fixed Price</span> <b>48</b></label>
+              <label><input type="checkbox"> <span>Full Time</span> <b>12</b></label>
+              <label><input type="checkbox"> <span>Part Time</span> <b>15</b></label>
+            </div>
+
+            <div class="find-jobs__group">
+              <h4>Budget Range</h4>
+              <div class="find-jobs__budget">
+                <input type="text" placeholder="Min">
+                <span>-</span>
+                <input type="text" placeholder="Max">
+              </div>
+            </div>
+
+            <div class="find-jobs__group">
+              <h4>Location</h4>
+              <label class="find-jobs__keyword">
+                <input type="text" placeholder="Type location...">
+                <i class="fa-solid fa-location-dot"></i>
+              </label>
+            </div>
+
+            <div class="find-jobs__group">
+              <h4>Posted Within</h4>
+              <label><input type="radio" name="posted" checked> <span>Any Time</span></label>
+              <label><input type="radio" name="posted"> <span>Last 24 Hours</span></label>
+              <label><input type="radio" name="posted"> <span>Last 3 Days</span></label>
+              <label><input type="radio" name="posted"> <span>Last 7 Days</span></label>
+              <label><input type="radio" name="posted"> <span>Last 30 Days</span></label>
+            </div>
+
+            <div class="find-jobs__actions">
+              <button class="btn btn--base" type="button">Apply Filters</button>
+              <button class="find-jobs__reset" type="button">Reset</button>
+            </div>
+          </aside>
+
+          <div class="find-jobs__content">
+            <div class="find-jobs__topbar">
+              <span>Showing 1-15 of 150 jobs</span>
+              <select aria-label="Sort jobs">
+                <option>Newest First</option>
+                <option>Best Match</option>
+                <option>Highest Budget</option>
+              </select>
+            </div>
+
+            <div class="find-jobs__list">
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--green"><i class="fa-solid fa-pen"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>UI/UX Designer for eCommerce Website Redesign <span>NEW</span></h3>
+                  <p>TechSolutions Inc. <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Full Time</li><li>Intermediate</li><li>Posted 2 hours ago</li></ul>
+                  <div><span>UI/UX Design</span><span>Figma</span><span>Adobe XD</span><span>Prototyping</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$800 - $1,200</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--blue"><i class="fa-solid fa-code"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>WordPress Developer for Custom Plugin <span>NEW</span></h3>
+                  <p>WebCraft Studio <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Hourly</li><li>Expert</li><li>Posted 4 hours ago</li></ul>
+                  <div><span>WordPress</span><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$25 - $40 / hr</strong>
+                  <small>Hourly</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--purple"><i class="fa-regular fa-file-lines"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Content Writer for Tech Blog Articles <span>NEW</span></h3>
+                  <p>Digital Insights <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Part Time</li><li>Intermediate</li><li>Posted 6 hours ago</li></ul>
+                  <div><span>Content Writing</span><span>SEO Writing</span><span>Blog Writing</span><span>Research</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$150 - $250</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--orange"><i class="fa-solid fa-bullhorn"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Social Media Manager for Brand Growth <span>NEW</span></h3>
+                  <p>BrandBoosters <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Full Time</li><li>Intermediate</li><li>Posted 8 hours ago</li></ul>
+                  <div><span>Social Media</span><span>Content Strategy</span><span>Facebook Ads</span><span>Analytics</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$600 - $900</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--green"><i class="fa-regular fa-circle-play"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Video Editor for YouTube Channel <span>NEW</span></h3>
+                  <p>Creator Studio <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Hourly</li><li>Intermediate</li><li>Posted 10 hours ago</li></ul>
+                  <div><span>Video Editing</span><span>Adobe Premiere Pro</span><span>YouTube</span><span>Motion Graphics</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$20 - $30 / hr</strong>
+                  <small>Hourly</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--red"><i class="fa-solid fa-globe"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Frontend Developer for Landing Page <span>NEW</span></h3>
+                  <p>StartupHub <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Fixed Price</li><li>Intermediate</li><li>Posted 12 hours ago</li></ul>
+                  <div><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$400 - $700</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--blue"><i class="fa-solid fa-language"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>English to Spanish Translator <span>NEW</span></h3>
+                  <p>Global Languages <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Part Time</li><li>Expert</li><li>Posted 14 hours ago</li></ul>
+                  <div><span>Translation</span><span>Spanish</span><span>English</span><span>Proofreading</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$0.05 - $0.10 / word</strong>
+                  <small>Hourly</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--purple"><i class="fa-solid fa-mobile-screen"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Mobile App Developer (React Native) <span>NEW</span></h3>
+                  <p>AppVision <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Full Time</li><li>Expert</li><li>Posted 16 hours ago</li></ul>
+                  <div><span>React Native</span><span>JavaScript</span><span>Mobile App</span><span>API Integration</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$1,000 - $2,000</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--orange"><i class="fa-solid fa-pencil"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Logo Design for Startup <span>NEW</span></h3>
+                  <p>DesignHub <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Fixed Price</li><li>Intermediate</li><li>Posted 18 hours ago</li></ul>
+                  <div><span>Logo Design</span><span>Branding</span><span>Illustrator</span><span>Photoshop</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$100 - $200</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--green"><i class="fa-regular fa-envelope"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Email Marketing Specialist <span>NEW</span></h3>
+                  <p>Marketing Pro <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Part Time</li><li>Intermediate</li><li>Posted 20 hours ago</li></ul>
+                  <div><span>Email Marketing</span><span>Mailchimp</span><span>Campaigns</span><span>Analytics</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$300 - $500</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--red"><i class="fa-solid fa-gear"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Backend Developer (Node.js) <span>NEW</span></h3>
+                  <p>DevCore Solutions <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Full Time</li><li>Expert</li><li>Posted 22 hours ago</li></ul>
+                  <div><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>REST API</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$1,200 - $2,500</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--blue"><i class="fa-solid fa-chart-column"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Google Ads Expert <span>NEW</span></h3>
+                  <p>AdBoost Agency <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Hourly</li><li>Intermediate</li><li>Posted 1 day ago</li></ul>
+                  <div><span>Google Ads</span><span>PPC</span><span>SEM</span><span>Google Analytics</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$20 - $35 / hr</strong>
+                  <small>Hourly</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--purple"><i class="fa-solid fa-pen-nib"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Product Description Writer <span>NEW</span></h3>
+                  <p>Ecommerce Pro <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Part Time</li><li>Intermediate</li><li>Posted 1 day ago</li></ul>
+                  <div><span>Product Description</span><span>SEO Writing</span><span>Ecommerce</span><span>Research</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$100 - $100</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--orange"><i class="fa-solid fa-microphone"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Voice Over Artist for Commercial <span>NEW</span></h3>
+                  <p>Media House <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Hourly</li><li>Expert</li><li>Posted 1 day ago</li></ul>
+                  <div><span>Voice Over</span><span>Commercial</span><span>English</span><span>Audio Editing</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$100 - $300</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+
+              <article class="find-jobs__job">
+                <span class="find-jobs__icon find-jobs__icon--green"><i class="fa-solid fa-paintbrush"></i></span>
+                <div class="find-jobs__job-main">
+                  <h3>Illustrator for Children's Book <span>NEW</span></h3>
+                  <p>KidsBooks Publishing <i class="fa-solid fa-circle-check"></i></p>
+                  <ul><li>Fixed Price</li><li>Expert</li><li>Posted 2 days ago</li></ul>
+                  <div><span>Illustration</span><span>Children's Book</span><span>Adobe Illustrator</span><span>Character Design</span></div>
+                </div>
+                <div class="find-jobs__job-side">
+                  <strong>$500 - $1,000</strong>
+                  <small>Fixed Price</small>
+                  <button type="button" aria-label="Save job"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+              </article>
+            </div>
+
+            <nav class="find-jobs__pagination" aria-label="Jobs pagination">
+              <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
+              <a class="active" href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <span>...</span>
+              <a href="#">10</a>
+              <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="find-jobs__cta">
+          <div class="find-jobs__cta-card">
+            <span><i class="fa-regular fa-paper-plane"></i></span>
+            <div>
+              <h3>Hire the best freelancers</h3>
+              <p>Post your job and get proposals from talented freelancers.</p>
+              <a class="btn btn--base" href="#">Post a Job</a>
+            </div>
+          </div>
+          <div class="find-jobs__cta-card">
+            <span><i class="fa-regular fa-user"></i></span>
+            <div>
+              <h3>Find your dream job</h3>
+              <p>Discover thousands of freelance jobs and start earning today.</p>
+              <a class="btn btn--base" href="#">Find Jobs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--========================== Find Jobs Section End ==========================-->
+</main>
+<!--==========================  Footer Section Start  ==========================-->
+<footer class="footer">
+    <div class="footer__video">
+        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+            <source src="assets/images/footer.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <div class="container">
+        <div class="footer__main">
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo">
+                    <img src="assets/images/logo/logo.png" alt="O-Lance">
+                </a>
+                <p class="footer__about">
+                    O-Lance connects businesses with skilled freelancers for design, development, marketing, writing,
+                    and support projects.
+                </p>
+
+                <div class="footer__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__links-wrap">
+                <div class="footer__column">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About O-Lance</a></li>
+                        <li><a href="#">Find Talent</a></li>
+                        <li><a href="#">Browse Projects</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Our Services</h3>
+                    <ul class="footer__list">
+                        <li><a href="#">Verified Freelancers</a></li>
+                        <li><a href="#">Project Matching</a></li>
+                        <li><a href="#">Secure Payments</a></li>
+                        <li><a href="#">Remote Teams</a></li>
+                        <li><a href="#">Client Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column footer__column--contact">
+                    <h3 class="footer__title">Get in Touch</h3>
+                    <div class="footer__contact-list">
+                        <div class="footer__contact-card">
+                            <span class="footer__contact-icon"><i class="fas fa-headset"></i></span>
+                            <div>
+                                <a href="tel:+18005550198">+1 800 555 0198</a>
+                                <a href="mailto:support@olance.com">support@olance.com</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__contact-card">
+                            <span class="footer__contact-icon"><i class="fas fa-location-dot"></i></span>
+                            <p>44 Market Street, San Francisco, CA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__cta">
+            <div class="footer__cta-content">
+                <h2>Get fresh talent updates and hiring tips</h2>
+            </div>
+
+            <form class="footer__newsletter" action="#">
+                <label class="sr-only" for="footerEmail">Email address</label>
+                <input type="email" id="footerEmail" placeholder="Enter your email" required>
+                <button type="submit" aria-label="Subscribe">
+                    <i class="fa-regular fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="footer__bottom">
+            <p>Copyright &copy; 2026 All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<!--==========================  Footer Section End  ==========================-->
+
+<!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap Bundle Js -->
+<script src="assets/js/boostrap.bundle.min.js"></script>
+<!-- Magnific Popup Js -->
+<script src="assets/js/magnific-popup.min.js"></script>
+<!-- Scrollreveal Js -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<!-- Swiper Js -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- Odometer Js -->
+<script src="assets/js/odometer.min.js"></script>
+<!-- Select2 Js -->
+<script src="assets/js/select2.min.js"></script>
+
+<!-- main js -->
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
