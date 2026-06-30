@@ -42,6 +42,18 @@
       font-size: clamp(40px, 4vw, 56px);
       font-weight: 850;
       line-height: 1.08;
+          @include lg-screen {
+        font-size: 36px;
+    }
+    @include sm-screen {
+        font-size: 30px;
+    }
+    @include msm-screen {
+        font-size: 28px;
+    }
+    @include xsm-screen {
+        font-size: 25px ! important;
+    }
     }
 
     > p {

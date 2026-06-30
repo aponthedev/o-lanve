@@ -1,0 +1,354 @@
+@@include('../partials/_template-top.html')
+@@include('../partials/_header.html')
+<main>
+  @@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "Talent Profile"
+  })
+  <!--========================== Talent Profile Section Start ==========================-->
+  <div class="talent-profile py-60">
+    <div class="container">
+      <div class="talent-profile__layout">
+        <div class="talent-profile__main">
+          <section class="talent-profile__card talent-profile__intro">
+            <div class="talent-profile__intro-top">
+              <div class="talent-profile__avatar">
+                <img
+                  src="assets/images/profile1.png"
+                  alt="Baskar Kasinathan"
+                />
+                <span aria-label="Available now"></span>
+              </div>
+              <div class="talent-profile__identity">
+                <div class="talent-profile__name-row">
+                  <div>
+                    <h1>
+                      Baskar Kasinathan
+                      <i class="las la-check-circle" title="Verified"></i>
+                    </h1>
+                    <p>Digital Marketing Specialist</p>
+                  </div>
+                  <div class="talent-profile__quick-actions">
+                    <button type="button" aria-label="Share profile">
+                      <i class="las la-share-alt"></i>
+                    </button>
+                    <button type="button" aria-label="More options">
+                      <i class="las la-ellipsis-v"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="talent-profile__highlights">
+                  <span><i class="las la-star"></i><strong>5.0</strong> (5.00)</span>
+                  <span><i class="las la-shield-alt"></i><strong>100%</strong> Job Success</span>
+                  <span><i class="las la-briefcase"></i><strong>1+</strong> Completed Job</span>
+                </div>
+
+                <div class="talent-profile__meta">
+                  <span><i class="las la-map-marker"></i> India</span>
+                  <span><i class="las la-calendar"></i> Member since Jan 2024</span>
+                </div>
+
+                <div class="talent-profile__intro-actions">
+                  <a href="#" class="talent-profile__hire">
+                    <i class="las la-paper-plane"></i> Hire Me
+                  </a>
+                  <a href="#"><i class="lar la-comment-dots"></i> Message</a>
+                  <button type="button">
+                    <i class="lar la-heart"></i> Save Talent
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="talent-profile__stats">
+              <div>
+                <i class="las la-shopping-bag"></i>
+                <span><strong>5+</strong> Years Experience</span>
+              </div>
+              <div>
+                <i class="las la-clock"></i>
+                <span><strong>120+</strong> Total Campaigns</span>
+              </div>
+              <div>
+                <i class="las la-bullseye"></i>
+                <span><strong>100%</strong> Job Success</span>
+              </div>
+              <div>
+                <i class="las la-clipboard-check"></i>
+                <span><strong>50+</strong> Completed Projects</span>
+              </div>
+              <div>
+                <i class="lar la-clock"></i>
+                <span><strong>1 Hr</strong> Response Time</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="talent-profile__card talent-profile__about">
+            <h2><i class="lar la-user"></i> About Me</h2>
+            <p>
+              I'm a Digital Marketing Specialist with a strong focus on SEO and
+              content strategy. I help businesses rank higher on search engines
+              and grow their organic traffic.
+            </p>
+            <p>
+              With 5+ years of experience, I deliver result-driven solutions.
+            </p>
+
+            <h2><i class="las la-cogs"></i> My Expertise</h2>
+            <div class="talent-profile__tags">
+              <span>SEO Writing</span>
+              <span>On-Page SEO</span>
+              <span>Off-Page SEO</span>
+              <span>Keyword Research</span>
+              <span>Technical SEO</span>
+              <span>Link Building</span>
+              <span>Technical SEO</span>
+              <span>Digital Marketing</span>
+              <span>Competitor Analysis</span>
+            </div>
+          </section>
+
+          <div class="talent-profile__split">
+            <section class="talent-profile__card talent-profile__reviews">
+              <div class="talent-profile__section-head">
+                <h2><i class="lar la-star"></i> Recent Reviews</h2>
+                <a href="#">View All Reviews</a>
+              </div>
+              <div class="swiper talent-profile__reviews-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article>
+                      <img src="assets/images/user.jpg" alt="Denver Roy" />
+                      <div>
+                        <h3>Denver Roy</h3>
+                        <span class="talent-profile__review-role">Buyer</span>
+                        <div class="talent-profile__rating" aria-label="5 out of 5 stars">
+                          <i class="las la-star"></i><i class="las la-star"></i
+                          ><i class="las la-star"></i><i class="las la-star"></i
+                          ><i class="las la-star"></i>
+                        </div>
+                        <blockquote>
+                          “Excellent SEO work, highly recommended! Great
+                          communication and delivery on time.”
+                        </blockquote>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article>
+                      <img src="assets/images/user2.jpg" alt="Sophia Miller" />
+                      <div>
+                        <h3>Sophia Miller</h3>
+                        <span class="talent-profile__review-role">Buyer</span>
+                        <div class="talent-profile__rating" aria-label="5 out of 5 stars">
+                          <i class="las la-star"></i><i class="las la-star"></i
+                          ><i class="las la-star"></i><i class="las la-star"></i
+                          ><i class="las la-star"></i>
+                        </div>
+                        <blockquote>
+                          “The campaign exceeded our expectations and increased
+                          our organic traffic within a few weeks.”
+                        </blockquote>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article>
+                      <img src="assets/images/user3.jpg" alt="James Wilson" />
+                      <div>
+                        <h3>James Wilson</h3>
+                        <span class="talent-profile__review-role">Buyer</span>
+                        <div class="talent-profile__rating" aria-label="5 out of 5 stars">
+                          <i class="las la-star"></i><i class="las la-star"></i
+                          ><i class="las la-star"></i><i class="las la-star"></i
+                          ><i class="las la-star"></i>
+                        </div>
+                        <blockquote>
+                          “Professional, responsive, and very knowledgeable.
+                          Every milestone was completed right on schedule.”
+                        </blockquote>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article>
+                      <img src="assets/images/user5.jpg" alt="Emma Brown" />
+                      <div>
+                        <h3>Emma Brown</h3>
+                        <span class="talent-profile__review-role">Buyer</span>
+                        <div class="talent-profile__rating" aria-label="5 out of 5 stars">
+                          <i class="las la-star"></i><i class="las la-star"></i
+                          ><i class="las la-star"></i><i class="las la-star"></i
+                          ><i class="las la-star"></i>
+                        </div>
+                        <blockquote>
+                          “Clear strategy, detailed reporting, and measurable
+                          results. I would happily work with him again.”
+                        </blockquote>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <div class="talent-profile__dots"></div>
+            </section>
+
+            <section class="talent-profile__card talent-profile__portfolio">
+              <div class="talent-profile__section-head">
+                <h2><i class="las la-photo-video"></i> My Portfolio</h2>
+                <a href="#">View All Portfolio</a>
+              </div>
+              <div class="talent-profile__portfolio-grid">
+                <a href="#">
+                  <img src="assets/images/blog1.png" alt="SEO campaign project" />
+                  <span><i class="las la-eye"></i> View Project</span>
+                </a>
+                <a href="#">
+                  <img src="assets/images/blog2.png" alt="Marketing strategy project" />
+                  <span><i class="las la-eye"></i> View Project</span>
+                </a>
+                <a href="#">
+                  <img src="assets/images/blog3.png" alt="Content growth project" />
+                  <span><i class="las la-eye"></i> View Project</span>
+                </a>
+                <a href="#">
+                  <img src="assets/images/blog4.png" alt="Analytics project" />
+                  <span><i class="las la-eye"></i> View Project</span>
+                </a>
+                <a href="#">
+                  <img src="assets/images/blog5.png" alt="SEO research project" />
+                  <span><i class="las la-eye"></i> View Project</span>
+                </a>
+                <a href="#">
+                  <img src="assets/images/blog6.png" alt="Brand campaign project" />
+                  <span><i class="las la-eye"></i> View Project</span>
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <aside class="talent-profile__sidebar">
+          <section class="talent-profile__card talent-profile__verification">
+            <h2>Verifications</h2>
+            <ul>
+              <li>
+                <i class="lar la-envelope"></i>
+                <span><strong>Email Verified</strong>baskar.kasinathan@gmail.com</span>
+                <i class="las la-check-circle"></i>
+              </li>
+              <li>
+                <i class="las la-mobile-alt"></i>
+                <span><strong>Mobile Verified</strong>+91 98765 43210</span>
+                <i class="las la-check-circle"></i>
+              </li>
+              <li>
+                <i class="lar la-id-card"></i>
+                <span><strong>Identity Verified</strong>Government ID verified</span>
+                <i class="las la-check-circle"></i>
+              </li>
+              <li>
+                <i class="las la-user-shield"></i>
+                <span><strong>Profile Verified</strong>This profile is 100% complete</span>
+                <i class="las la-check-circle"></i>
+              </li>
+            </ul>
+          </section>
+
+          <section class="talent-profile__card talent-profile__skills">
+            <h2><i class="las la-tools"></i> Top Skilled Jobs</h2>
+            <ul>
+              <li><span>HTML, CSS</span><b>1</b></li>
+              <li><span>Responsive Design</span><b>1</b></li>
+              <li><span>API Development</span><b>1</b></li>
+              <li><span>MySQL</span><b>1</b></li>
+              <li><span>MongoDB</span><b>1</b></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <section class="talent-profile__card talent-profile__similar">
+        <div class="talent-profile__section-head">
+          <h2>Freelancers Similar Skills</h2>
+          <div>
+            <button type="button" aria-label="Previous freelancer">
+              <i class="las la-angle-left"></i>
+            </button>
+            <button type="button" aria-label="Next freelancer">
+              <i class="las la-angle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="talent-profile__similar-grid">
+          <article>
+            <img src="assets/images/profile2.png" alt="N Xafiz" />
+            <div>
+              <h3>N Xafiz <i class="las la-check-circle"></i></h3>
+              <p>SEO Specialist</p>
+              <span><i class="las la-star"></i> 4.9 <small>(120)</small></span>
+            </div>
+            <div class="talent-profile__mini-tags">
+              <span>SEO Writing</span><span>Link Building</span>
+            </div>
+            <a href="#">View Profile</a>
+          </article>
+          <article>
+            <img src="assets/images/profile3.png" alt="Rakib Hasan" />
+            <div>
+              <h3>Rakib Hasan <i class="las la-check-circle"></i></h3>
+              <p>Digital Marketing Expert</p>
+              <span><i class="las la-star"></i> 5.0 <small>(95)</small></span>
+            </div>
+            <div class="talent-profile__mini-tags">
+              <span>Content Strategy</span><span>SEO</span>
+            </div>
+            <a href="#">View Profile</a>
+          </article>
+          <article>
+            <img src="assets/images/profile4.png" alt="Jahid Hasan" />
+            <div>
+              <h3>Jahid Hasan <i class="las la-check-circle"></i></h3>
+              <p>On-Page SEO Expert</p>
+              <span><i class="las la-star"></i> 4.8 <small>(98)</small></span>
+            </div>
+            <div class="talent-profile__mini-tags">
+              <span>On-Page SEO</span><span>Technical SEO</span>
+            </div>
+            <a href="#">View Profile</a>
+          </article>
+          <article>
+            <img src="assets/images/user4.jpg" alt="Nusrat Jahan" />
+            <div>
+              <h3>Nusrat Jahan <i class="las la-check-circle"></i></h3>
+              <p>Content &amp; SEO Writer</p>
+              <span><i class="las la-star"></i> 4.9 <small>(110)</small></span>
+            </div>
+            <div class="talent-profile__mini-tags">
+              <span>SEO Writing</span><span>Keyword Research</span>
+            </div>
+            <a href="#">View Profile</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="talent-profile__cta">
+        <div class="talent-profile__cta-icon">
+          <i class="las la-briefcase"></i>
+        </div>
+        <div>
+          <h2>Find the Perfect Talent for Your Project</h2>
+          <p>Connect with skilled professionals and get your work done faster.</p>
+        </div>
+        <div class="talent-profile__cta-actions">
+          <a href="#"><i class="las la-briefcase"></i> Hire Freelancer</a>
+          <a href="#"><i class="las la-user"></i> Become Freelancer</a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!--========================== Talent Profile Section End ==========================-->
+</main>
+@@include('../partials/_footer.html')
+@@include('../partials/_template-bottom.html')

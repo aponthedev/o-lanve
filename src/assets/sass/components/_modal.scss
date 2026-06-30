@@ -44,4 +44,12 @@
   }
 }
 
+
+
+.btn-close:focus {
+    outline: 0;
+    box-shadow: none !important;
+    opacity: none !important;
+    
+}
 /* ================================= Modal Css End =========================== */

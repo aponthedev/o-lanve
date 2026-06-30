@@ -18,6 +18,7 @@
     justify-content: space-between;
     gap: 24px;
     margin-bottom: 32px;
+    flex-wrap: wrap;
 
     .custom--tab {
       margin-bottom: 0 !important;
@@ -87,6 +88,13 @@
   border-radius: 12px;
   box-shadow: inset 0 1px 0 hsl(var(--white) / 0.9);
 
+  @include xsm-screen{
+        flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
   &__item{
     flex: 1 1 0;
     min-width: 0;
@@ -98,6 +106,10 @@
     color: hsl(var(--heading-color));
     margin-bottom: 3px;
     line-height: 1.1;
+
+    @include xsm-screen{
+      font-size: 18px;
+    }
   }
 
   &__desc{
@@ -123,6 +135,10 @@
     padding-bottom: 16px;
     border-bottom: 1px solid hsl(var(--border-color) / 0.1);
     margin-bottom: 24px;
+
+    @include xsm-screen{
+      margin-bottom: 14px;
+    }
   }
 
   &__info {
@@ -172,9 +188,12 @@
     font-size: 25px;
     font-weight: 700;
     color: hsl(var(--black));
-    margin-bottom: 30px;
-   
+    margin-bottom: 30px;   
     line-height: 1.2;
+
+    @include msm-screen{
+      font-size: 20px;
+    }
   }
 
   &__body-heading{

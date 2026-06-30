@@ -3,7 +3,7 @@
 .footer {
     position: relative;
     overflow: hidden;
-   padding-top: 200px;
+   padding-top: 120px;
    padding-bottom: 40px;
     color: hsl(var(--white));
     background-color: hsl(var(--black));
@@ -191,6 +191,10 @@
 .footer__contact-card:last-child {
     padding-bottom: 0;
     border-bottom: 0;
+
+    @include md-screen{
+        padding-bottom: 18px;
+    }
 }
 
 .footer__contact-card a,
@@ -307,7 +311,7 @@
 }
 
 .footer__bottom {
-    margin-top: 0;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -486,6 +490,7 @@
     .footer__bottom p {
         font-size: 13px;
     }
+
 }
 
 @media (max-width: 374px) {

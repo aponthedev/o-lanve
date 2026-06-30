@@ -109,7 +109,7 @@
       991: {
         slidesPerView: 1,
       },
-      1199: {
+      992: {
         slidesPerView: 2,
       },
       1200: {
@@ -191,6 +191,83 @@
     });
   }
   // ========================= Cetagorey Swiper Js End =====================
+
+  // ========================= Talent Review Swiper Js Start =====================
+  if ($('.talent-profile__reviews-slider').length) {
+    new Swiper('.talent-profile__reviews-slider', {
+      loop: true,
+      speed: 700,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      grabCursor: true,
+      autoHeight: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: '.talent-profile__dots',
+        clickable: true,
+      },
+    });
+  }
+  // ========================= Talent Review Swiper Js End =====================
+
+  // ========================= Explore Proposal Toggle Js Start =====================
+  $('.explore__bids').each(function () {
+    const bidsSection = $(this);
+    const button = bidsSection.find('.explore__load-more');
+    const bidCount = bidsSection.find('.explore__bid').length;
+
+    if (bidCount <= 4) {
+      button.hide();
+      return;
+    }
+
+    button.on('click', function () {
+      const isExpanded = bidsSection
+        .toggleClass('is-expanded')
+        .hasClass('is-expanded');
+
+      button.attr('aria-expanded', isExpanded);
+      button.find('span').text(isExpanded ? 'Show Less' : 'Show More');
+    });
+  });
+  // ========================= Explore Proposal Toggle Js End =====================
+
+  // ========================= View Profile Description Toggle Js Start =====================
+  $('.view-profile__desc-more').each(function () {
+    const descBlock = $(this);
+    const buttons = descBlock.find('.view-profile__desc-toggle');
+
+    buttons.on('click', function () {
+      const isExpanded = descBlock
+        .toggleClass('is-expanded')
+        .hasClass('is-expanded');
+
+      buttons.attr('aria-expanded', isExpanded);
+    });
+  });
+  // ========================= View Profile Description Toggle Js End =====================
+
+  // ========================= View Profile Reviews Toggle Js Start =====================
+  $('.review').each(function () {
+    const reviewSection = $(this);
+    const toggleButton = reviewSection.find('.review__toggle');
+
+    toggleButton.on('click', function () {
+      const isExpanded = reviewSection
+        .toggleClass('is-expanded')
+        .hasClass('is-expanded');
+
+      toggleButton.attr('aria-expanded', isExpanded);
+      toggleButton
+        .find('span')
+        .text(isExpanded ? 'Show less reviews' : 'Show more reviews');
+    });
+  });
+  // ========================= View Profile Reviews Toggle Js End =====================
 
   // ========================= Select2 Js Start =====================
   if ($('.select2').length) {

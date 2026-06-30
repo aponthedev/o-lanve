@@ -167,6 +167,7 @@
     justify-content: space-between;
     padding-top: 20px;
     border-top: 1px solid hsl(var(--border-color) / 0.1);
+    flex-wrap: wrap;
 }
 
 .testimonial-item-v2__name {

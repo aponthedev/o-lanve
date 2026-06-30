@@ -12,6 +12,7 @@
     &.active {
         opacity: 1;
         visibility: visible;
+        backdrop-filter: blur(5px);
     }
 }
 
@@ -31,6 +32,19 @@ padding-bottom: 40px;
 .section-heading h2 {
     margin-bottom: 10px;
     font-size: 50px;
+
+    @include lg-screen {
+        font-size: 36px;
+    }
+    @include sm-screen {
+        font-size: 30px;
+    }
+    @include msm-screen {
+        font-size: 28px;
+    }
+    @include xsm-screen {
+        font-size: 25px;
+    }
 }
 
 .section-heading a {

@@ -1,0 +1,787 @@
+@@include('../partials/_template-top.html')
+@@include('../partials/_header.html')
+<main>
+  @@include('../partials/_breadcrumb.html', { "breadcrumbText": "Find Talents"
+  })
+  <!--========================== Find Jobs Section Start ==========================-->
+  <div class="find-talents py-60">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="find-talents__header">
+            <div class="find-talents__header-top">
+              <div>
+          
+                <h2>Find your perfect talent</h2>
+                <p>Search and narrow down professionals who match your needs.</p>
+              </div>
+              <span class="find-talents__result-count"
+                ><strong>48</strong> talents found</span
+              >
+            </div>
+
+            <form class="find-talents__filters">
+              <div class="row g-3 align-items-end">
+                <div class="col-lg-3 col-md-6">
+                  <label for="form-control">Search talent</label>
+                  <div class="find-talents__search">
+                    <i class="las la-search"></i>
+                    <input
+                      id="talent-search"
+                      type="search"
+                      placeholder="Name, skill or keyword"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <label for="talent-category">Category</label>
+                  <select
+                    id="talent-category"
+                    class="form-select select2"
+                    aria-label="Filter talents by category"
+                  >
+                    <option selected>All categories</option>
+                    <option value="design">Design &amp; Creative</option>
+                    <option value="development">Development &amp; IT</option>
+                    <option value="marketing">Sales &amp; Marketing</option>
+                  </select>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <label for="talent-location">Location</label>
+                  <select
+                    id="talent-location"
+                    class="form-select select2"
+                    aria-label="Filter talents by location"
+                  >
+                    <option selected>All locations</option>
+                    <option value="remote">Remote</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="bangladesh">Bangladesh</option>
+                  </select>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <label for="talent-rate">Hourly rate</label>
+                  <div class="find-talents__filter-action">
+                    <select
+                      id="talent-rate"
+                      class="form-select select2"
+                      aria-label="Filter talents by hourly rate"
+                    >
+                      <option selected>Any rate</option>
+                      <option value="under-25">Under $25/hr</option>
+                      <option value="25-50">$25 – $50/hr</option>
+                      <option value="50-100">$50 – $100/hr</option>
+                      <option value="100-plus">$100+/hr</option>
+                    </select>
+                    <button type="reset" aria-label="Reset talent filters">
+                      <i class="las la-redo-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="find-talents__profiles">
+        <article class="talent-card">
+          <div class="talent-card__head">
+            <img src="assets/images/profile1.png" alt="Rajat C." />
+            <div>
+              <h3>Rajat C. <i class="las la-check-circle"></i></h3>
+              <div class="talent-card__metrics">
+                <span><i class="las la-star"></i> 4.9</span>
+                <span><i class="las la-comment-alt"></i> 3969</span>
+                <span><i class="las la-dollar-sign"></i> 10.0</span>
+                <span><i class="las la-circle-notch"></i> 96%</span>
+              </div>
+              <p><i class="las la-map-marker-alt"></i> Sylhet, Bangladesh</p>
+            </div>
+          </div>
+          <div class="talent-card__rate"><strong>$35 USD</strong> per hour</div>
+          <p class="talent-card__bio">
+            My journey began with a passion for creating meaningful digital
+            experiences. <a href="#">more</a>
+          </p>
+          <div class="talent-card__skills">
+            <span>Graphic Design</span><span>PHP</span><span>JavaScript</span>
+          </div>
+          <a class="talent-card__button" href="view-profile.html">View Profile</a>
+        </article>
+
+        <article class="talent-card">
+          <div class="talent-card__head">
+            <img src="assets/images/profile2.png" alt="Md Ariful I." />
+            <div>
+              <h3>Md Ariful I. <i class="las la-check-circle"></i></h3>
+              <div class="talent-card__metrics">
+                <span><i class="las la-star"></i> 5.0</span>
+                <span><i class="las la-comment-alt"></i> 1461</span>
+                <span><i class="las la-dollar-sign"></i> 8.1</span>
+                <span><i class="las la-circle-notch"></i> 100%</span>
+              </div>
+              <p><i class="las la-map-marker-alt"></i> Barisal, Bangladesh</p>
+            </div>
+          </div>
+          <div class="talent-card__rate"><strong>$15 USD</strong> per hour</div>
+          <p class="talent-card__bio">
+            I am a creative designer with 9+ years of experience building
+            memorable brands. <a href="#">more</a>
+          </p>
+          <div class="talent-card__skills">
+            <span>Graphic Design</span><span>Banner Design</span><span>Photoshop</span>
+          </div>
+          <a class="talent-card__button" href="view-profile.html">View Profile</a>
+        </article>
+
+        <article class="talent-card">
+          <div class="talent-card__head">
+            <img src="assets/images/profile3.png" alt="Mahamud R." />
+            <div>
+              <h3>Mahamud R. <i class="las la-check-circle"></i></h3>
+              <div class="talent-card__metrics">
+                <span><i class="las la-star"></i> 4.9</span>
+                <span><i class="las la-comment-alt"></i> 3202</span>
+                <span><i class="las la-dollar-sign"></i> 8.7</span>
+                <span><i class="las la-circle-notch"></i> 99%</span>
+              </div>
+              <p><i class="las la-map-marker-alt"></i> Uttara, Bangladesh</p>
+            </div>
+          </div>
+          <div class="talent-card__rate"><strong>$25 USD</strong> per hour</div>
+          <p class="talent-card__bio">
+            I create distinctive brand identities that command attention and
+            premium value. <a href="#">more</a>
+          </p>
+          <div class="talent-card__skills">
+            <span>Graphic Design</span><span>Website Design</span><span>Branding</span>
+          </div>
+          <a class="talent-card__button" href="view-profile.html">View Profile</a>
+        </article>
+
+        <article class="talent-card">
+          <div class="talent-card__head">
+            <img src="assets/images/profile4.png" alt="Md Delowar H." />
+            <div>
+              <h3>Md Delowar H. <i class="las la-check-circle"></i></h3>
+              <div class="talent-card__metrics">
+                <span><i class="las la-star"></i> 5.0</span>
+                <span><i class="las la-comment-alt"></i> 5581</span>
+                <span><i class="las la-dollar-sign"></i> 9.2</span>
+                <span><i class="las la-circle-notch"></i> 100%</span>
+              </div>
+              <p><i class="las la-map-marker-alt"></i> Dhaka, Bangladesh</p>
+            </div>
+          </div>
+          <div class="talent-card__rate"><strong>$10 USD</strong> per hour</div>
+          <p class="talent-card__bio">
+            A passionate Photoshop and graphic design specialist focused on
+            polished results. <a href="#">more</a>
+          </p>
+          <div class="talent-card__skills">
+            <span>Graphic Design</span><span>Adobe Flash</span><span>Banner Design</span>
+          </div>
+          <a class="talent-card__button" href="view-profile.html">View Profile</a>
+        </article>
+
+        <article class="talent-card">
+          <div class="talent-card__head">
+            <img src="assets/images/user3.jpg" alt="Arif Mahmud" />
+            <div>
+              <h3>Arif Mahmud <i class="las la-check-circle"></i></h3>
+              <div class="talent-card__metrics">
+                <span><i class="las la-star"></i> 5.0</span>
+                <span><i class="las la-comment-alt"></i> 2545</span>
+                <span><i class="las la-dollar-sign"></i> 8.9</span>
+                <span><i class="las la-circle-notch"></i> 100%</span>
+              </div>
+              <p><i class="las la-map-marker-alt"></i> Khulna, Bangladesh</p>
+            </div>
+          </div>
+          <div class="talent-card__rate"><strong>$15 USD</strong> per hour</div>
+          <p class="talent-card__bio">
+            Exceeding expectations with clear communication, thoughtful design
+            and reliable delivery. <a href="#">more</a>
+          </p>
+          <div class="talent-card__skills">
+            <span>Graphic Design</span><span>Website Design</span><span>Translation</span>
+          </div>
+          <a class="talent-card__button" href="view-profile.html">View Profile</a>
+        </article>
+
+        <article class="talent-card">
+          <div class="talent-card__head">
+            <img src="assets/images/user4.jpg" alt="Md Nurul Amin" />
+            <div>
+              <h3>Md Nurul Amin <i class="las la-check-circle"></i></h3>
+              <div class="talent-card__metrics">
+                <span><i class="las la-star"></i> 5.0</span>
+                <span><i class="las la-comment-alt"></i> 2233</span>
+                <span><i class="las la-dollar-sign"></i> 8.8</span>
+                <span><i class="las la-circle-notch"></i> 99%</span>
+              </div>
+              <p><i class="las la-map-marker-alt"></i> Khulna, Bangladesh</p>
+            </div>
+          </div>
+          <div class="talent-card__rate"><strong>$20 USD</strong> per hour</div>
+          <p class="talent-card__bio">
+            Photoshop specialist delivering creative visuals for brands,
+            campaigns and digital products. <a href="#">more</a>
+          </p>
+          <div class="talent-card__skills">
+            <span>Graphic Design</span><span>Banner Design</span><span>Photoshop</span>
+          </div>
+          <a class="talent-card__button" href="view-profile.html">View Profile</a>
+        </article>
+      </div>
+
+      <div class="row gy-4 justify-content-center d-none" aria-hidden="true">
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="best-freelancers__card" tabindex="0">
+            <div class="best-freelancers__media">
+              <img
+                src="assets/images/profile1.png"
+                alt="Ethan Bennett, product designer"
+              />
+              <span class="best-freelancers__availability"
+                ><i></i> Available now</span
+              >
+              <button
+                class="best-freelancers__favorite"
+                type="button"
+                aria-label="Save Ethan Bennett's profile"
+              >
+                <i class="lar la-heart"></i>
+              </button>
+            </div>
+            <div class="best-freelancers__content">
+              <div class="best-freelancers__identity">
+                <div>
+                  <h3>
+                    Ethan Bennett
+                    <span title="Verified professional"
+                      ><i class="las la-check"></i
+                    ></span>
+                  </h3>
+                  <p>Senior Product Designer</p>
+                </div>
+                <strong>$45<span>/hr</span></strong>
+              </div>
+              <div class="best-freelancers__skills">
+                <span>Figma</span><span>UX Research</span
+                ><span>Prototyping</span>
+              </div>
+              <div class="best-freelancers__stats">
+                <span><i class="las la-star"></i><b>4.9</b> (128)</span>
+                <span><i class="las la-briefcase"></i><b>62</b> jobs</span>
+              </div>
+              <a class="best-freelancers__profile" href="#"
+                >View profile <i class="las la-arrow-up"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--========================== Find Jobs Section End ==========================-->
+</main>
+@@include('../partials/_footer.html')
+@@include('../partials/_template-bottom.html')

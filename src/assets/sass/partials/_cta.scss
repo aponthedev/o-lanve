@@ -16,6 +16,11 @@
     background: hsl(var(--black));
     box-shadow: 0 26px 70px hsl(var(--black) / 0.18);
 
+    @include sm-screen{
+      padding: 16px;
+      border-radius: 10px;
+    }
+
 
   }
 
@@ -24,6 +29,9 @@
   &__content {
     position: relative;
     z-index: 1;
+    @include md-screen{
+      margin-bottom: 20px;
+    }
   }
 
   &__eyebrow {
@@ -54,6 +62,10 @@
     font-weight: 850;
     line-height: 1.02;
     letter-spacing: -2.4px;
+
+    @include lg-screen{
+      font-size: 40px;
+    }
 
     span {
       color: hsl(var(--base));
@@ -163,8 +175,12 @@
     border: 1px solid hsl(var(--white) / 0.14);
     border-radius: 22px;
     background: hsl(var(--white) / 0.07);
-    box-shadow: 0 24px 55px hsl(0 0% 0% / 0.24);
+   
     backdrop-filter: blur(12px);
+
+    @include sm-screen{
+      border-radius: 16px;
+    }
   }
 
   &__proof-head {
@@ -204,6 +220,7 @@
     align-items: center;
     gap: 16px;
     padding: 24px 0;
+    flex-wrap: wrap;
 
     p { margin: 0; color: hsl(var(--white) / 0.55); font-size: 12px; line-height: 1.55; }
     strong { color: hsl(var(--white)); font-size: 14px; }
@@ -232,9 +249,23 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
 
-    div { display: grid; gap: 5px; padding: 16px; border-radius: 14px; background: hsl(var(--white) / 0.07); }
-    strong { color: hsl(var(--white)); font-size: 24px; line-height: 1; }
-    span { color: hsl(var(--white) / 0.5); font-size: 11px; }
+    @include sm-screen{
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    div { display: grid; gap: 5px; padding: 16px;
+       border-radius: 14px;
+        background: hsl(var(--white) / 0.07);
+       }
+    strong { 
+      color: hsl(var(--white)); 
+      font-size: 24px;
+       line-height: 1;
+       }
+    span { 
+      color: hsl(var(--white) / 0.5)
+      ; font-size: 11px; 
+    }
   }
 
   &__match {

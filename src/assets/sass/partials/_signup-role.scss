@@ -15,6 +15,11 @@
     border: 1px solid hsl(var(--border-color) / 0.1);
     border-radius: 24px;
     background-color: hsl(var(--white));
+
+    @include msm-screen {
+     min-height: 100% !important;
+     height: 100% !important;
+    }
   }
 
   &__card--freelancer {
@@ -33,6 +38,13 @@
     display: flex;
     flex-direction: column;
     padding: 30px 0 28px 30px;
+
+    @include msm-screen {
+      width: 100%;
+      min-height: 100% !important;
+      height: 100% !important;
+      padding: 20px;
+    }
   }
 
   &__role {
@@ -122,6 +134,10 @@
     align-items: flex-end;
     justify-content: flex-end;
     pointer-events: none;
+     @include msm-screen{
+        display: none;
+      }
+    
 
     &::before {
       content: "";
@@ -137,6 +153,10 @@
       box-shadow: 0 18px 40px hsl(var(--black) / 0.06);
       transform: rotate(5deg);
       transform-origin: center bottom;
+
+      @include msm-screen{
+        display: none;
+      }
     }
 
     img {

@@ -1,4 +1,43 @@
 /* ======================  Faq Section Start  ======================*/
+.faq {
+    .section-heading {
+        max-width: 760px;
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
+.faq__accordion {
+    max-width: 100%;
+}
+
+.faq__button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+}
+
+.faq__number {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(var(--base-two));
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1;
+
+    &::after {
+        content: ".";
+    }
+}
+
+.faq__question-text {
+    min-width: 0;
+    flex: 1;
+}
+
 .faq__visual {
     position: relative;
     z-index: 1;
@@ -86,6 +125,14 @@
 }
 
 @media (max-width: 575px) {
+    .faq__button {
+        gap: 12px;
+    }
+
+    .faq__number {
+        font-size: 14px;
+    }
+
     .faq__visual > img:first-child {
         min-height: 420px;
     }

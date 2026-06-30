@@ -79,6 +79,12 @@
 
         .offcanvas__menu ul {
             li {
+                &:last-child {
+                    a {
+                        border-bottom: 0;
+                    }
+                }
+
                 a {
                     display: block;
                     width: 100%;
@@ -129,7 +135,7 @@
 
         .menu__open {
             font-size: 24px;
-            color: hsl(var(--heading-color));
+            color: hsl(var(--base));
             cursor: pointer;
             transition: .3s;
             display: none;
@@ -154,7 +160,7 @@
     }
 
     .header__menu {
-        @include md-screen {
+        @include lg-screen {
             display: none;
         }
 
@@ -289,6 +295,15 @@
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
+}
+
+.btn__offcanvaus{
+    
+    padding: 11px 16px;
+    border-radius: 10px; 
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* ======================  Header Section End  ======================*/

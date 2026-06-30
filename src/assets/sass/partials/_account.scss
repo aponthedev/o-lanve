@@ -32,19 +32,20 @@
     border-radius: 22px;
     color: hsl(var(--white));
     background:
-      linear-gradient(180deg, hsl(160 45% 10% / 0.2) 0%, hsl(160 55% 8% / 0.88) 100%),
-      url("../images/login-visual.png") center / cover no-repeat;
+      linear-gradient(180deg, hsl(var(--black) / 0.2) 0%, hsl(var(--black) / 0.2)) 100%,
+      url("../images/login-image.png") center / cover no-repeat;
 
     &::after {
-      content: "";
-      position: absolute;
-      inset: auto 28px 28px;
-      height: 1px;
-      background: linear-gradient(90deg, hsl(var(--white) / 0.68), transparent);
+        content: "";
+    position: absolute;
+    background-color: hsl(var(--black));
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
 
-      @include lg-screen {
-      display: none;
-      }
+    
     }
   }
 

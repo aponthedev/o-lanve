@@ -1,0 +1,989 @@
+/* ======================  Find-talents Section Start  ======================*/
+.find-talents {
+  &__header {
+    position: relative;
+    margin-bottom: 32px;
+    padding: 26px;
+    overflow: hidden;
+    border: 1px solid hsl(var(--black) / 0.07);
+    border-radius: 18px;
+    background: hsl(var(--white));
+  }
+
+  &__header-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 22px;
+
+    h2 {
+      margin: 8px 0 5px;
+      color: hsl(var(--heading-color));
+      font-size: 24px;
+      font-weight: 850;
+      letter-spacing: -0.4px;
+    }
+
+    p {
+      margin: 0;
+      color: hsl(var(--body-color));
+      font-size: 14px;
+    }
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: hsl(var(--base-two));
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+
+    i {
+      font-size: 15px;
+    }
+  }
+
+  &__result-count {
+    flex: 0 0 auto;
+    padding: 9px 13px;
+    border: 1px solid hsl(var(--base-two) / 0.12);
+    border-radius: 30px;
+    color: hsl(var(--body-color));
+    background: hsl(var(--base-two) / 0.07);
+    font-size: 12px;
+    font-weight: 600;
+
+    strong {
+      color: hsl(var(--base-two));
+      font-weight: 900;
+    }
+  }
+
+  &__filters {
+    position: relative;
+    z-index: 1;
+    padding: 18px;
+    border-radius: 13px;
+    background: hsl(var(--section-bg) / 0.55);
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: hsl(var(--heading-color));
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .select2-container--default .select2-selection--single {
+      min-height: 48px;
+      padding: 15px 34px 15px 14px;
+      border-color: hsl(var(--black) / 0.08);
+      box-shadow: 0 5px 16px hsl(var(--black) / 0.025);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .select2-container--focus .select2-selection--single,
+    .select2-container--open .select2-selection--single {
+      border-color: hsl(var(--base-two) / 0.55);
+      box-shadow: 0 0 0 3px hsl(var(--base-two) / 0.09);
+    }
+  }
+
+  &__search {
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      color: hsl(var(--base-two));
+      font-size: 18px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    input {
+      width: 100%;
+      height: 48px;
+      padding: 0 14px 0 43px;
+      border: 1px solid hsl(var(--black) / 0.08);
+      border-radius: 8px;
+      color: hsl(var(--heading-color));
+      background: hsl(var(--white));
+      font-size: 13px;
+      outline: none;
+      box-shadow: 0 5px 16px hsl(var(--black) / 0.025);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &::placeholder {
+        color: hsl(var(--body-color) / 0.62);
+      }
+
+      &:focus {
+        border-color: hsl(var(--base-two) / 0.55);
+        box-shadow: 0 0 0 3px hsl(var(--base-two) / 0.09);
+      }
+    }
+  }
+
+  &__filter-action {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    gap: 8px;
+
+    button {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid hsl(var(--base-two) / 0.16);
+      border-radius: 8px;
+      color: hsl(var(--base-two));
+      background: hsl(var(--white));
+      font-size: 18px;
+      transition: color 0.2s ease, background-color 0.2s ease,
+        transform 0.2s ease;
+
+      &:hover {
+        color: hsl(var(--white));
+        background: hsl(var(--base-two));
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  &__grid {
+    > [class*="col-"] {
+      width: 33.333333%;
+    }
+
+    .best-freelancers__card {
+      height: 100%;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid hsl(var(--border-color));
+      border-radius: 18px;
+      background: hsl(var(--white));
+      box-shadow: 0 14px 36px hsl(var(--black) / 0.06);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease,
+        transform 0.25s ease;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &:hover,
+      &:focus-within {
+        border-color: hsl(var(--base-two) / 0.3);
+        box-shadow: 0 24px 52px hsl(var(--black) / 0.11);
+        transform: translateY(-6px);
+
+        .best-freelancers__media img {
+          transform: scale(1.06);
+          filter: none;
+        }
+
+        .best-freelancers__availability,
+        .best-freelancers__favorite,
+        .best-freelancers__identity p,
+        .best-freelancers__identity > strong,
+        .best-freelancers__skills,
+        .best-freelancers__stats,
+        .best-freelancers__profile {
+          max-height: none;
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+        }
+
+        .best-freelancers__skills,
+        .best-freelancers__stats {
+          margin-top: 16px;
+        }
+
+        .best-freelancers__profile {
+          margin-top: auto;
+          padding: 12px 14px;
+        }
+      }
+    }
+
+    .best-freelancers__media {
+      width: 100%;
+      height: 145px;
+      flex: 0 0 145px;
+      display: grid;
+      place-items: end center;
+      overflow: visible;
+      border-radius: 0;
+      background:
+        radial-gradient(circle at 20% 20%, hsl(var(--base) / 0.25), transparent 25%),
+        linear-gradient(
+          135deg,
+          hsl(var(--base-two-d-200)),
+          hsl(var(--base-two))
+        );
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        display: block;
+        height: auto;
+        background:
+          linear-gradient(120deg, hsl(var(--white) / 0.05), transparent 45%),
+          radial-gradient(circle at 85% 20%, hsl(var(--base) / 0.18), transparent 24%);
+      }
+
+      img {
+        position: relative;
+        z-index: 2;
+        width: 108px;
+        height: 108px;
+        margin-bottom: -34px;
+        border: 5px solid hsl(var(--white));
+        border-radius: 50%;
+        object-fit: cover;
+        filter: none;
+        box-shadow: 0 12px 28px hsl(var(--black) / 0.18);
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .best-freelancers__availability {
+      top: auto;
+      right: auto;
+      bottom: -37px;
+      left: calc(50% + 31px);
+      z-index: 3;
+      width: 18px;
+      height: 18px;
+      max-height: none;
+      padding: 0;
+      overflow: hidden;
+      border: 3px solid hsl(var(--white));
+      border-radius: 50%;
+      color: transparent;
+      background: hsl(var(--success));
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+
+      i {
+        display: none;
+      }
+    }
+
+    .best-freelancers__favorite {
+      z-index: 4;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid hsl(var(--white) / 0.25);
+      border-radius: 50%;
+      color: hsl(var(--white));
+      background: hsl(var(--black) / 0.2);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 6px 16px hsl(var(--black) / 0.1);
+      font-size: 19px;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+
+      &:hover,
+      &:focus-visible {
+        border-color: hsl(var(--base-two));
+        color: hsl(var(--black));
+        background: hsl(var(--base));
+        transform: translateY(-2px);
+      }
+    }
+
+    .best-freelancers__content {
+      position: static;
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 24px 24px;
+      background: hsl(var(--white));
+    }
+
+    .best-freelancers__identity {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 0 17px;
+      border-bottom: 1px solid hsl(var(--border-color));
+
+      h3 {
+        margin-bottom: 5px;
+        color: hsl(var(--heading-color));
+        font-size: 19px;
+        text-shadow: none;
+        transform: none;
+
+        span {
+          width: 17px;
+          height: 17px;
+          color: hsl(var(--white));
+          background: hsl(var(--base-two));
+          font-size: 11px;
+        }
+      }
+
+      p {
+        max-height: none;
+        color: hsl(var(--body-color));
+        font-size: 14px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
+      > strong {
+        display: inline-flex;
+        align-items: baseline;
+        max-height: none;
+        margin-top: 0;
+        color: hsl(var(--base-two));
+        font-size: 19px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+
+        span {
+          color: hsl(var(--body-color));
+          font-size: 13px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .best-freelancers__skills {
+      max-height: none;
+      margin-top: 16px;
+      opacity: 1;
+      visibility: visible;
+      overflow: visible;
+      transform: none;
+
+      span {
+        padding: 6px 9px;
+        border: 1px solid hsl(var(--base-two) / 0.1);
+        border-radius: 999px;
+        color: hsl(var(--base-two));
+        background: hsl(var(--base-two) / 0.06);
+        font-size: 12px;
+        font-weight: 650;
+      }
+    }
+
+    .best-freelancers__stats {
+      justify-content: space-between;
+      gap: 12px;
+      max-height: none;
+      margin-top: 16px;
+      padding: 14px 0;
+      border-color: hsl(var(--border-color));
+      color: hsl(var(--body-color));
+      font-size: 13px;
+      opacity: 1;
+      visibility: visible;
+      overflow: visible;
+      transform: none;
+
+      i {
+        color: hsl(var(--warning));
+      }
+
+      span:last-child i {
+        color: hsl(var(--base-two));
+      }
+
+      b {
+        color: hsl(var(--heading-color));
+      }
+    }
+
+    .best-freelancers__profile {
+      min-height: 48px;
+      max-height: none;
+      margin-top: auto;
+      padding: 12px 14px;
+      border: 1px solid hsl(var(--base-two));
+      border-radius: 10px;
+      color: hsl(var(--white));
+      background: hsl(var(--base-two));
+      font-size: 15px;
+      font-weight: 750;
+      opacity: 1;
+      visibility: visible;
+      overflow: visible;
+      transform: none;
+
+      i {
+        width: 28px;
+        height: 28px;
+        color: hsl(var(--heading-color));
+        background: hsl(var(--base));
+      }
+
+      &:hover {
+        border-color: hsl(var(--base));
+        color: hsl(var(--heading-color));
+        background: hsl(var(--base));
+        transform: translateY(-2px);
+
+        i {
+          color: hsl(var(--white));
+          background: hsl(var(--base-two));
+        }
+      }
+    }
+  }
+
+  // Compact marketplace profile card
+  &__grid {
+    .best-freelancers__card {
+      min-height: 300px;
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
+      gap: 0 14px;
+      padding: 26px 24px 24px;
+      overflow: hidden;
+      border: 1px solid hsl(var(--border-color));
+      border-radius: 8px;
+      background: hsl(var(--white));
+      box-shadow: 0 2px 4px hsl(var(--black) / 0.05);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      &:hover,
+      &:focus-within {
+        border-color: hsl(var(--base-two) / 0.3);
+        box-shadow: 0 10px 26px hsl(var(--black) / 0.08);
+        transform: translateY(-3px);
+
+        .best-freelancers__media img {
+          transform: none;
+        }
+
+        .best-freelancers__availability,
+        .best-freelancers__favorite,
+        .best-freelancers__identity p,
+        .best-freelancers__identity > strong,
+        .best-freelancers__skills,
+        .best-freelancers__stats,
+        .best-freelancers__profile {
+          max-height: none;
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+        }
+
+        .best-freelancers__skills,
+        .best-freelancers__stats {
+          margin-top: 12px;
+        }
+
+        .best-freelancers__profile {
+          margin-top: 16px;
+          padding: 11px 14px;
+        }
+      }
+    }
+
+    .best-freelancers__media {
+      width: 64px;
+      height: 64px;
+      flex: none;
+      overflow: visible;
+      border-radius: 4px;
+      background: hsl(var(--section-bg));
+
+      &::after {
+        display: none;
+      }
+
+      img {
+        width: 64px;
+        height: 64px;
+        margin: 0;
+        border: 0;
+        border-radius: 4px;
+        object-fit: cover;
+        box-shadow: none;
+        filter: none;
+        transform: none;
+      }
+    }
+
+    .best-freelancers__availability {
+      top: auto;
+      right: -3px;
+      bottom: -3px;
+      left: auto;
+      z-index: 2;
+      width: 14px;
+      height: 14px;
+      max-height: none;
+      padding: 0;
+      overflow: hidden;
+      border: 2px solid hsl(var(--white));
+      border-radius: 50%;
+      color: transparent;
+      background: hsl(var(--success));
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+
+      i {
+        display: none;
+      }
+    }
+
+    .best-freelancers__favorite {
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      border-radius: 6px;
+      color: hsl(var(--body-color));
+      background: hsl(var(--section-bg));
+      box-shadow: none;
+      font-size: 17px;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+
+      &:hover,
+      &:focus-visible {
+        color: hsl(var(--white));
+        background: hsl(var(--base-two));
+        transform: none;
+      }
+    }
+
+    .best-freelancers__content {
+      position: static;
+      grid-column: 2;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      background: transparent;
+    }
+
+    .best-freelancers__identity {
+      display: block;
+      padding-right: 32px;
+      border: 0;
+
+      h3 {
+        margin-bottom: 5px;
+        color: hsl(var(--heading-color));
+        font-size: 17px;
+        font-weight: 800;
+        text-shadow: none;
+        transform: none;
+
+        span {
+          width: 16px;
+          height: 16px;
+          color: hsl(var(--white));
+          background: hsl(var(--info));
+          font-size: 10px;
+        }
+      }
+
+      p {
+        max-height: none;
+        color: hsl(var(--body-color));
+        font-size: 14px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
+      > strong {
+        display: block;
+        max-height: none;
+        margin-top: 14px;
+        color: hsl(var(--heading-color));
+        font-size: 20px;
+        font-weight: 850;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+
+        span {
+          color: hsl(var(--body-color));
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .best-freelancers__stats {
+      order: 2;
+      justify-content: flex-start;
+      gap: 18px;
+      max-height: none;
+      margin-top: 12px;
+      padding: 0;
+      border: 0;
+      color: hsl(var(--body-color));
+      font-size: 13px;
+      opacity: 1;
+      visibility: visible;
+      overflow: visible;
+      transform: none;
+
+      i {
+        color: hsl(var(--warning));
+      }
+
+      span:last-child i {
+        color: hsl(var(--base-two));
+      }
+
+      b {
+        color: hsl(var(--heading-color));
+      }
+    }
+
+    .best-freelancers__skills {
+      order: 3;
+      max-height: 28px;
+      margin-top: 12px;
+      flex-wrap: nowrap;
+      opacity: 1;
+      visibility: visible;
+      overflow: hidden;
+      transform: none;
+
+      span {
+        position: relative;
+        flex: 0 0 auto;
+        padding: 0 12px 0 0;
+        border: 0;
+        border-radius: 0;
+        color: hsl(var(--heading-color));
+        background: transparent;
+        font-size: 13px;
+        font-weight: 500;
+
+        &:not(:last-child)::after {
+          content: "•";
+          position: absolute;
+          right: 3px;
+          color: hsl(var(--body-color));
+        }
+      }
+    }
+
+    .best-freelancers__profile {
+      order: 4;
+      width: 100%;
+      min-height: 40px;
+      max-height: none;
+      margin-top: 16px;
+      padding: 11px 14px;
+      border: 1px solid hsl(var(--base-two));
+      border-radius: 4px;
+      color: hsl(var(--white));
+      background: hsl(var(--base-two));
+      font-size: 15px;
+      font-weight: 750;
+      opacity: 1;
+      visibility: visible;
+      overflow: visible;
+      transform: none;
+
+      i {
+        display: none;
+      }
+
+      &:hover {
+        border-color: hsl(var(--base-two-d-200));
+        color: hsl(var(--white));
+        background: hsl(var(--base-two-d-200));
+        transform: none;
+      }
+    }
+  }
+
+  &__profiles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .talent-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border: 1px solid hsl(var(--border-color) / 0.1);
+    border-radius: 24px;
+    background: hsl(var(--white));
+box-shadow: 0 2px 5px hsl(var(--black) / 0.05);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease,
+      transform 0.25s ease;
+
+    &:hover {
+      border-color: hsl(var(--base-two) / 0.3);
+      box-shadow: 0 12px 28px hsl(var(--black) / 0.08);
+      transform: translateY(-3px);
+    }
+
+    &__head {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+
+      > img {
+        width: 64px;
+        height: 64px;
+        border-radius: 4px;
+        object-fit: cover;
+        background: hsl(var(--section-bg));
+      }
+
+      h3 {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin: 0 0 5px;
+        color: hsl(var(--heading-color));
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1.25;
+
+        i {
+          color: hsl(var(--info));
+          font-size: 16px;
+        }
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin: 4px 0 0;
+        color: hsl(var(--heading-color));
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        i {
+          color: hsl(var(--base-two));
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__metrics {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      color: hsl(var(--heading-color));
+      font-size: 14px;
+
+      span {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+      }
+
+      span:nth-child(1) i {
+        color: hsl(var(--warning));
+      }
+
+      span:nth-child(2) i {
+        color: hsl(var(--danger));
+      }
+
+      span:nth-child(3) i {
+        color: hsl(var(--success));
+      }
+
+      span:nth-child(4) i {
+        color: hsl(var(--info));
+      }
+    }
+
+    &__rate {
+      margin-top: 14px;
+      color: hsl(var(--heading-color));
+      font-size: 14px;
+
+      strong {
+        margin-right: 4px;
+        font-size: 20px;
+        font-weight: 850;
+      }
+    }
+
+    &__bio {
+      display: -webkit-box;
+      min-height: 48px;
+      margin: 9px 0 0;
+      overflow: hidden;
+      color: hsl(var(--heading-color));
+      font-size: 14px;
+      line-height: 1.65;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+
+      a {
+        color: hsl(var(--base-two));
+        font-weight: 650;
+      }
+    }
+
+    &__skills {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 0;
+      margin-top: 12px;
+      overflow: hidden;
+
+      span {
+        position: relative;
+        flex: 0 0 auto;
+        padding-right: 16px;
+        color: hsl(var(--heading-color));
+        font-size: 14px;
+        white-space: nowrap;
+
+        &:not(:last-child)::after {
+          content: "•";
+          position: absolute;
+          right: 6px;
+          color: hsl(var(--body-color));
+        }
+      }
+    }
+
+    &__button {
+      min-height: 42px;
+      display: grid;
+      place-items: center;
+      margin-top: 16px;
+      padding: 10px 16px;
+      border: 1px solid hsl(var(--base-two));
+      border-radius: 4px;
+      color: hsl(var(--white));
+      background: hsl(var(--base-two));
+      font-size: 15px;
+      font-weight: 800;
+      transition: color 0.2s ease, background-color 0.2s ease,
+        border-color 0.2s ease;
+
+      &:hover {
+        border-color: hsl(var(--base));
+        color: hsl(var(--heading-color));
+        background: hsl(var(--base));
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+  .find-talents__grid > [class*="col-"] {
+    width: 50%;
+  }
+
+  .find-talents__profiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .find-talents {
+    &__header {
+      padding: 20px;
+    }
+
+    &__header-top {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    &__filters {
+      padding: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .find-talents {
+    &__header {
+      padding: 16px;
+      border-radius: 14px;
+    }
+
+    &__header-top h2 {
+      font-size: 21px;
+    }
+
+    &__grid > [class*="col-"] {
+      width: 100%;
+    }
+
+    &__grid .best-freelancers__card {
+      min-height: 300px;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 0 12px;
+      padding: 20px 18px;
+    }
+
+    &__grid .best-freelancers__media {
+      width: 58px;
+      height: 58px;
+
+      img {
+        width: 58px;
+        height: 58px;
+      }
+    }
+
+    &__profiles {
+      grid-template-columns: 1fr;
+    }
+
+    .talent-card {
+      padding: 20px;
+    }
+  }
+}
+/* ======================  Find-talents Section End  ======================*/
